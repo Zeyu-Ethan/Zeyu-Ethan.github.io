@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Engineering portfolio of Zeyu Lin, Electronic and Electrical Engineering student at the University of Hertfordshire."
+  >
+
+  <title>Zeyu Lin | Engineering Portfolio</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-identity">
+        <a class="site-name" href="index.html">
+          Zeyu Lin
+        </a>
+
+        <span class="profile-summary">
+          Electronic &amp; Electrical Engineering · University of Hertfordshire
+        </span>
+      </div>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a
+          class="nav-link"
+          href="https://github.com/Zeyu-Ethan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <div class="contact-menu">
+          <button
+            class="contact-toggle"
+            id="contact-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="contact-panel"
+          >
+            Contact
+          </button>
+
+          <div
+            class="contact-panel"
+            id="contact-panel"
+            aria-label="Contact information"
+          >
+            <div class="contact-row">
+               <span class="contact-type">Email</span>
+
+            <a
+              class="contact-email"
+              href="mailto:zeyuethanlin@gmail.com"
+              draggable="false"
+            >
+                zeyuethanlin@gmail.com
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="projects">
+    <section
+      class="showcase"
+      aria-label="Selected engineering projects"
+    >
+      <div
+        class="hero-frame"
+        id="hero-frame"
+        style="--caption-rgb: 95, 90, 88;"
+      >
+        <img
+          class="hero-image"
+          id="hero-image"
+          src="assets/images/covers/esp32-cover.png"
+          alt="ESP32 Light Sensor Alarm System"
+        >
+
+        <p class="project-summary" id="project-summary">
+          ESP32 Light Sensor Alarm System — Embedded alarm with local Wi-Fi monitoring and Python data logging.
+        </p>
+
+        <button
+          class="arrow arrow-left"
+          id="previous-project"
+          type="button"
+          aria-label="Previous project"
+        >
+          &#10094;
+        </button>
+
+        <button
+          class="arrow arrow-right"
+          id="next-project"
+          type="button"
+          aria-label="Next project"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <div
+        class="thumbnail-row"
+        aria-label="Choose a project"
+      >
+        <button
+          class="thumbnail active"
+          type="button"
+          data-index="0"
+          aria-label="Show ESP32 Light Sensor Alarm System"
+        >
+          <img
+            src="assets/images/covers/esp32-cover.png"
+            alt=""
+          >
+        </button>
+
+        <button
+          class="thumbnail"
+          type="button"
+          data-index="1"
+          aria-label="Show Smart Electronic Toy Racetrack System"
+        >
+          <img
+            src="assets/images/covers/racetrack-cover.jpg"
+            alt=""
+          >
+        </button>
+
+        <button
+          class="thumbnail"
+          type="button"
+          data-index="2"
+          aria-label="Show JK Flip-Flop Traffic Light Controller"
+        >
+          <img
+            src="assets/images/covers/traffic-light-cover.png"
+            alt=""
+          >
+        </button>
+
+        <button
+          class="thumbnail"
+          type="button"
+          data-index="3"
+          aria-label="Show UK Chapter Design Challenge 2026"
+        >
+          <img
+            src="assets/images/covers/ewb-cover.png"
+            alt=""
+          >
+        </button>
+
+        <button
+          class="thumbnail"
+          type="button"
+          data-index="4"
+          aria-label="Show AMplify Impact Challenge 2026"
+        >
+          <img
+            src="assets/images/covers/amplify-cover.png"
+            alt=""
+          >
+        </button>
+      </div>
+
+      <div
+        class="mobile-dots"
+        aria-label="Project slides"
+      >
+        <button
+          class="dot active"
+          type="button"
+          data-index="0"
+          aria-label="Show project 1"
+        ></button>
+
+        <button
+          class="dot"
+          type="button"
+          data-index="1"
+          aria-label="Show project 2"
+        ></button>
+
+        <button
+          class="dot"
+          type="button"
+          data-index="2"
+          aria-label="Show project 3"
+        ></button>
+
+        <button
+          class="dot"
+          type="button"
+          data-index="3"
+          aria-label="Show project 4"
+        ></button>
+
+        <button
+          class="dot"
+          type="button"
+          data-index="4"
+          aria-label="Show project 5"
+        ></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Zeyu Lin</p>
+  </footer>
+</body>
+</html>
