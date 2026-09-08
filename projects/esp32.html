@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="ESP32 Light Sensor Alarm System developed by Zeyu Lin."
+  >
+
+  <title>ESP32 Light Sensor Alarm System | Zeyu Lin</title>
+
+  <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+  <!-- Shared portfolio header and contact menu -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-identity">
+        <a class="site-name" href="../index.html">
+          Zeyu Lin
+        </a>
+
+        <span class="profile-summary">
+          Electronic &amp; Electrical Engineering · University of Hertfordshire
+        </span>
+      </div>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="../index.html">
+          Portfolio
+        </a>
+
+        <a
+          class="nav-link"
+          href="https://github.com/Zeyu-Ethan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <div class="contact-menu">
+          <button
+            class="contact-toggle"
+            id="contact-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="contact-panel"
+          >
+            Contact
+          </button>
+
+          <div
+            class="contact-panel"
+            id="contact-panel"
+            aria-label="Contact information"
+          >
+            <div class="contact-row">
+              <span class="contact-type">Email</span>
+
+              <a
+                class="contact-email"
+                href="mailto:zeyuethanlin@gmail.com"
+                draggable="false"
+              >
+                zeyuethanlin@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Desktop section navigation; hidden on narrower screens -->
+  <nav class="section-navigation" aria-label="ESP32 project sections">
+    <div class="section-dots">
+      <button class="section-dot is-active" type="button" data-target="introduction" aria-label="Go to Project introduction" aria-current="true">
+        <span>Project introduction</span>
+      </button>
+      <button class="section-dot" type="button" data-target="overview" aria-label="Go to Project overview">
+        <span>Project overview</span>
+      </button>
+      <button class="section-dot" type="button" data-target="functionality" aria-label="Go to Core functionality">
+        <span>Core functionality</span>
+      </button>
+      <button class="section-dot" type="button" data-target="development" aria-label="Go to Development process">
+        <span>Development process</span>
+      </button>
+      <button class="section-dot" type="button" data-target="results" aria-label="Go to Test results">
+        <span>Test results</span>
+      </button>
+      <button class="section-dot" type="button" data-target="decisions" aria-label="Go to Engineering decisions">
+        <span>Engineering decisions</span>
+      </button>
+    </div>
+
+    <div class="section-arrows" aria-label="Move between project sections">
+      <button class="section-arrow" id="previous-section" type="button" aria-label="Previous project section" title="Previous section">
+        <span aria-hidden="true">&#8593;</span>
+      </button>
+      <button class="section-arrow" id="next-section" type="button" aria-label="Next project section" title="Next section">
+        <span aria-hidden="true">&#8595;</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="project-page">
+    <div class="project-shell">
+      <a class="back-link" href="../index.html">
+        <span aria-hidden="true">←</span>
+        Back to all projects
+      </a>
+
+      <!-- Project title, summary and primary actions -->
+      <section class="project-introduction" id="introduction">
+        <p class="eyebrow">
+          Embedded Systems · Personal Project · 2026
+        </p>
+
+        <h1>ESP32 Light Sensor Alarm System</h1>
+
+        <p class="project-lead">
+          An ESP32 prototype for light sensing, alarm control, local Wi-Fi monitoring and Python data logging.
+        </p>
+
+        <div class="project-actions">
+          <a
+            class="primary-button"
+            href="https://github.com/Zeyu-Ethan/esp32-light-sensor-alarm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub Repository
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="secondary-button" href="#development">
+            Explore Development
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <ul class="technology-list" aria-label="Technologies used">
+          <li>ESP32</li>
+          <li>Arduino</li>
+          <li>Embedded C++</li>
+          <li>Wi-Fi WebServer</li>
+          <li>Python</li>
+          <li>pySerial</li>
+        </ul>
+      </section>
+
+      <!-- Project overview -->
+      <section class="overview-section" id="overview">
+        <figure class="prototype-figure">
+          <img
+            src="../assets/images/esp32/final_prototype_overview.jpg"
+            alt="Completed ESP32 light sensor alarm hardware prototype"
+          >
+
+          <figcaption>
+            Final prototype integrating the ESP32, light sensor,
+            push-button controls, LED and buzzer.
+          </figcaption>
+        </figure>
+
+        <div class="overview-content">
+          <p class="section-label">Project overview</p>
+
+          <h2>From sensor reading to a complete monitoring workflow</h2>
+
+          <p>
+            The project began as a simple light-dependent resistor
+            experiment and developed into a complete embedded system.
+            The ESP32 monitors ambient light, evaluates alarm conditions
+            and controls visual and audible outputs.
+          </p>
+
+          <p>
+            I then extended the prototype with physical controls, a
+            local Wi-Fi monitoring interface and a Python application
+            that records serial data for later analysis.
+          </p>
+
+          <dl class="project-facts">
+            <div>
+              <dt>Controller</dt>
+              <dd>MakePico ESP32</dd>
+            </div>
+
+            <div>
+              <dt>Sensor</dt>
+              <dd>LDR module</dd>
+            </div>
+
+            <div>
+              <dt>Outputs</dt>
+              <dd>LED and buzzer</dd>
+            </div>
+
+            <div>
+              <dt>Development</dt>
+              <dd>Arduino IDE and Python</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Core system functions -->
+      <section class="content-section" id="functionality">
+        <div class="section-heading">
+          <p class="section-label">Core functionality</p>
+          <h2>What the system does</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>Analogue light sensing</h3>
+
+            <p>
+              Reads the LDR analogue output and compares changing
+              light levels against a configurable alarm threshold.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Alarm state logic</h3>
+
+            <p>
+              Uses confirmation timing and state logic to reduce false
+              alarms caused by brief changes in the sensor reading.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>Local Wi-Fi monitoring</h3>
+
+            <p>
+              Hosts a browser-accessible status page showing sensor,
+              alarm and output states on the same local network.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-number">04</span>
+            <h3>Python data analysis</h3>
+
+            <p>
+              Parses structured serial output, stores readings in CSV
+              format and visualises sensor behaviour over time.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Progressive development stages -->
+      <section class="content-section" id="development">
+        <div class="section-heading">
+          <p class="section-label">Development process</p>
+          <h2>Built and tested in progressive stages</h2>
+        </div>
+
+        <div class="development-list">
+          <article class="development-stage">
+            <div class="stage-marker">V1</div>
+
+            <div>
+              <h3>Sensor and output prototype</h3>
+
+              <p>
+                Established the ESP32 hardware setup, read analogue LDR
+                values and verified LED output through repeatable tests.
+              </p>
+            </div>
+          </article>
+
+          <article class="development-stage">
+            <div class="stage-marker">V2</div>
+
+            <div>
+              <h3>Integrated alarm controls</h3>
+
+              <p>
+                Added threshold-based alarm behaviour, button
+                debouncing and independent control of LED and buzzer
+                outputs.
+              </p>
+            </div>
+          </article>
+
+          <article class="development-stage">
+            <div class="stage-marker">V3</div>
+
+            <div>
+              <h3>Local web monitoring</h3>
+
+              <p>
+                Implemented an ESP32 web server that presents live
+                sensor and system states through a local browser page.
+              </p>
+            </div>
+          </article>
+
+          <article class="development-stage">
+            <div class="stage-marker">V4</div>
+
+            <div>
+              <h3>PC data workflow</h3>
+
+              <p>
+                Extended the system with Python serial parsing, CSV
+                logging, summary statistics and graphical analysis.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Test evidence and recorded sensor data -->
+      <section class="data-section" id="results">
+        <div class="data-copy">
+          <p class="section-label">Test results</p>
+
+          <h2>Sensor data and alarm events</h2>
+
+          <p>
+            The recorded data shows clear transitions between lower
+            and higher LDR readings. Alarm events are marked when the
+            readings cross the test threshold.
+          </p>
+
+          <p>
+            Recording the serial output made it possible to check the
+            system behaviour after testing instead of relying only on
+            live observations.
+          </p>
+        </div>
+
+        <figure class="data-figure">
+          <img
+            src="../assets/images/esp32/serial_log_plot.png"
+            alt="Graph of ESP32 LDR readings and alarm events over time"
+          >
+
+          <figcaption>
+            Python visualisation generated from structured ESP32
+            serial data.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Engineering decisions and design reasoning -->
+      <section class="engineering-section" id="decisions">
+        <div class="section-heading">
+          <p class="section-label">Engineering decisions</p>
+          <h2>Design choices made during development</h2>
+        </div>
+
+        <div class="decision-grid">
+          <article>
+            <h3>Analogue measurement</h3>
+
+            <p>
+              Analogue readings provide more information than a simple
+              digital light/dark output and allow the threshold to be
+              calibrated from observed values.
+            </p>
+          </article>
+
+          <article>
+            <h3>Confirmation timing</h3>
+
+            <p>
+              A sustained-darkness check prevents a brief shadow or
+              noisy reading from immediately changing the alarm state.
+            </p>
+          </article>
+
+          <article>
+            <h3>Local monitoring</h3>
+
+            <p>
+              Hosting the interface directly on the ESP32 avoids a
+              cloud service and keeps monitoring available within the
+              local network.
+            </p>
+          </article>
+        </div>
+
+        <!-- Repository card shares the final navigation page -->
+        <section class="repository-section">
+        <div>
+          <p class="section-label">Source and documentation</p>
+
+          <h2>View the complete development record</h2>
+
+          <p>
+            Code, system diagrams, test evidence and the development
+            log are available on GitHub.
+          </p>
+        </div>
+
+        <a
+          class="primary-button"
+          href="https://github.com/Zeyu-Ethan/esp32-light-sensor-alarm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Repository
+          <span aria-hidden="true">↗</span>
+        </a>
+        </section>
+
+        <div class="project-ending">
+          <nav class="project-navigation" aria-label="Project navigation">
+            <a class="return-button" href="../index.html">
+              <span aria-hidden="true">←</span>
+              Back to all projects
+            </a>
+          </nav>
+
+          <footer class="site-footer">
+            <p>© 2026 Zeyu Lin</p>
+          </footer>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // Keep the contact panel usable with mouse, keyboard and touch input.
+    const contactMenu = document.querySelector(".contact-menu");
+    const contactToggle = document.getElementById("contact-toggle");
+
+    function closeContactMenu() {
+      contactMenu.classList.remove("is-open");
+      contactToggle.setAttribute("aria-expanded", "false");
+    }
+
+    contactToggle.addEventListener("click", function (event) {
+      event.stopPropagation();
+
+      const willOpen =
+        !contactMenu.classList.contains("is-open");
+
+      contactMenu.classList.toggle("is-open", willOpen);
+      contactToggle.setAttribute(
+        "aria-expanded",
+        String(willOpen)
+      );
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!contactMenu.contains(event.target)) {
+        closeContactMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeContactMenu();
+        contactToggle.focus();
+      }
+    });
+
+    // Connect all six navigation dots to the complete page structure.
+    const sectionDots = Array.from(
+      document.querySelectorAll(".section-dot")
+    );
+
+    const projectSections = sectionDots.map(function (dot) {
+      return document.getElementById(dot.dataset.target);
+    });
+
+    const navigationStops = projectSections;
+
+    const previousSectionButton =
+      document.getElementById("previous-section");
+
+    const nextSectionButton =
+      document.getElementById("next-section");
+
+    let activeNavigationIndex = 0;
+
+    function setActiveSection(index) {
+      activeNavigationIndex = index;
+
+      sectionDots.forEach(function (dot, dotIndex) {
+        const isActive = dotIndex === index;
+
+        dot.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+
+      previousSectionButton.disabled = index === 0;
+      nextSectionButton.disabled =
+        index === navigationStops.length - 1;
+    }
+
+    function scrollToSection(index) {
+      navigationStops[index].scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+
+    sectionDots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        setActiveSection(index);
+        scrollToSection(index);
+      });
+    });
+
+    previousSectionButton.addEventListener("click", function () {
+      if (activeNavigationIndex > 0) {
+        setActiveSection(activeNavigationIndex - 1);
+        scrollToSection(activeNavigationIndex);
+      }
+    });
+
+    nextSectionButton.addEventListener("click", function () {
+      if (activeNavigationIndex < navigationStops.length - 1) {
+        setActiveSection(activeNavigationIndex + 1);
+        scrollToSection(activeNavigationIndex);
+      }
+    });
+
+    // Highlight the section closest to the reader's viewing position.
+    function updateActiveSectionFromScroll() {
+      let nearestIndex = 0;
+      let nearestDistance = Number.POSITIVE_INFINITY;
+
+      navigationStops.forEach(function (section, index) {
+        const sectionBounds = section.getBoundingClientRect();
+        const sectionPosition =
+          sectionBounds.top + sectionBounds.height / 2;
+        const distance = Math.abs(
+          sectionPosition - window.innerHeight / 2
+        );
+
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIndex = index;
+        }
+      });
+
+      if (nearestIndex !== activeNavigationIndex) {
+        setActiveSection(nearestIndex);
+      }
+    }
+
+    let scrollUpdateRequested = false;
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!scrollUpdateRequested) {
+          window.requestAnimationFrame(function () {
+            updateActiveSectionFromScroll();
+            scrollUpdateRequested = false;
+          });
+
+          scrollUpdateRequested = true;
+        }
+      },
+      { passive: true }
+    );
+
+    setActiveSection(0);
+    updateActiveSectionFromScroll();
+  </script>
+</body>
+</html>

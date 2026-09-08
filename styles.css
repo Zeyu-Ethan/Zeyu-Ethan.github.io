@@ -298,6 +298,23 @@ button {
   object-fit: contain;
 }
 
+.hero-project-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  cursor: pointer;
+}
+
+.hero-project-link.is-disabled {
+  pointer-events: none;
+}
+
+.hero-project-link:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.92);
+  outline-offset: -5px;
+}
+
 .hero-frame::after {
   position: absolute;
   right: 0;
@@ -342,6 +359,7 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  pointer-events: none;
 }
 
 /* ==================================================

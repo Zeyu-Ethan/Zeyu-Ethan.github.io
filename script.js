@@ -2,6 +2,7 @@ const projects = [
   {
     image: "assets/images/covers/esp32-cover.png",
     alt: "ESP32 Light Sensor Alarm System",
+    url: "projects/esp32.html",
     summary:
       "ESP32 Light Sensor Alarm System — Embedded alarm with local Wi-Fi monitoring and Python data logging.",
     gradient: "95, 90, 88"
@@ -9,6 +10,7 @@ const projects = [
   {
     image: "assets/images/covers/racetrack-cover.jpg",
     alt: "Smart Electronic Toy Racetrack System",
+    url: null,
     summary:
       "Smart Electronic Toy Racetrack System — PCB timer design and testing.",
     gradient: "35, 55, 78"
@@ -16,6 +18,7 @@ const projects = [
   {
     image: "assets/images/covers/traffic-light-cover.png",
     alt: "JK Flip-Flop Traffic Light Controller",
+    url: null,
     summary:
       "JK Flip-Flop Traffic Light Controller — Eight-state sequential controller designed and verified in Multisim.",
     gradient: "65, 61, 72"
@@ -23,6 +26,7 @@ const projects = [
   {
     image: "assets/images/covers/ewb-cover.png",
     alt: "UK Chapter Design Challenge 2026",
+    url: null,
     summary:
       "UK Chapter Design Challenge 2026 — CountryCare Kit for remote healthcare.",
     gradient: "112, 112, 120"
@@ -30,6 +34,7 @@ const projects = [
   {
     image: "assets/images/covers/amplify-cover.png",
     alt: "AMplify Impact Challenge 2026",
+    url: null,
     summary:
       "AMplify Impact Challenge 2026 — A low-waste pre-print checklist concept for schools and workshops.",
     gradient: "45, 93, 94"
@@ -38,6 +43,9 @@ const projects = [
 
 const heroFrame = document.getElementById("hero-frame");
 const heroImage = document.getElementById("hero-image");
+const heroProjectLink = document.getElementById(
+  "hero-project-link"
+);
 const projectSummary = document.getElementById("project-summary");
 
 const previousButton = document.getElementById("previous-project");
@@ -63,6 +71,22 @@ function showProject(index) {
   heroImage.alt = project.alt;
 
   projectSummary.textContent = project.summary;
+
+  if (project.url) {
+    heroProjectLink.href = project.url;
+    heroProjectLink.setAttribute(
+      "aria-label",
+      `Open ${project.alt}`
+    );
+    heroProjectLink.classList.remove("is-disabled");
+  } else {
+    heroProjectLink.removeAttribute("href");
+    heroProjectLink.setAttribute(
+      "aria-label",
+      `${project.alt} details coming later`
+    );
+    heroProjectLink.classList.add("is-disabled");
+  }
 
   heroFrame.style.setProperty(
     "--caption-rgb",
@@ -110,7 +134,13 @@ thumbnails.forEach((thumbnail) => {
   });
 
   thumbnail.addEventListener("click", () => {
-    showProject(index);
+    const project = projects[index];
+
+    if (project.url) {
+      window.location.href = project.url;
+    } else {
+      showProject(index);
+    }
   });
 });
 
