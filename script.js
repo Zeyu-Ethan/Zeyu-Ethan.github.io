@@ -26,7 +26,7 @@ const projects = [
   {
     image: "assets/images/covers/ewb-cover.png",
     alt: "UK Chapter Design Challenge 2026",
-    url: null,
+    url: "projects/uk-chapter.html",
     summary:
       "UK Chapter Design Challenge 2026 — CountryCare Kit for remote healthcare.",
     gradient: "112, 112, 120"
@@ -34,7 +34,7 @@ const projects = [
   {
     image: "assets/images/covers/amplify-cover.png",
     alt: "AMplify Impact Challenge 2026",
-    url: null,
+    url: "projects/amplify.html",
     summary:
       "AMplify Impact Challenge 2026 — A low-waste pre-print checklist concept for schools and workshops.",
     gradient: "45, 93, 94"

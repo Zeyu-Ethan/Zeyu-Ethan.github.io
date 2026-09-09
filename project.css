@@ -1279,7 +1279,7 @@ body.lightbox-open {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
   gap: 34px;
-  align-items: center;
+  align-items: start;
 }
 
 .outcome-copy h2 {
@@ -1291,7 +1291,16 @@ body.lightbox-open {
 }
 
 .enclosure-figure img {
-  height: 290px;
+  height: 220px;
+}
+
+.racetrack-outcome-section .outcome-copy > p:not(.section-label) {
+  margin: 18px 0 0;
+  line-height: 1.58;
+}
+
+.racetrack-outcome-section .result-grid {
+  margin-top: 30px;
 }
 
 .result-grid {
@@ -1530,8 +1539,383 @@ a.all-projects-card:focus-visible {
 }
 
 .traffic-result-grid span {
-  max-width: 210px;
   line-height: 1.35;
+  white-space: nowrap;
+}
+
+.traffic-outcome-section .section-heading {
+  margin-bottom: 30px;
+}
+
+.traffic-outcome-section .decision-grid article {
+  min-height: 185px;
+}
+
+.traffic-outcome-section .traffic-result-grid {
+  margin-top: 32px;
+}
+
+.traffic-result-grid article {
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 82px;
+
+  text-align: center;
+}
+
+.traffic-outcome-section .project-ending {
+  margin-top: 32px;
+}
+
+/* =========================
+   UK Chapter Design Challenge
+   ========================= */
+
+.uk-chapter-project-page .project-introduction h1 {
+  font-size: clamp(2.15rem, 3.55vw, 3.05rem);
+}
+
+.uk-slide-figure img,
+.uk-countrycare-figure img,
+.uk-impact-figure img {
+  background: #f4f4f4;
+  object-fit: contain;
+}
+
+.uk-slide-figure img {
+  max-height: 500px;
+}
+
+.uk-solution-section .section-heading {
+  max-width: 930px;
+  margin-bottom: 20px;
+}
+
+.uk-solution-section .section-heading h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.55rem);
+  white-space: nowrap;
+}
+
+.uk-solution-layout {
+  display: grid;
+  grid-template-columns: minmax(350px, 1.08fr) minmax(0, 0.92fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.uk-countrycare-figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.uk-countrycare-figure img {
+  height: 100%;
+  min-height: 300px;
+}
+
+.countrycare-list {
+  display: grid;
+  gap: 1px;
+
+  margin: 0;
+  padding: 1px;
+
+  background: var(--border);
+  list-style: none;
+}
+
+.countrycare-list li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  align-items: start;
+
+  padding: 11px 15px;
+
+  background: var(--panel);
+}
+
+.countrycare-list span {
+  padding-top: 3px;
+
+  color: var(--purple-light);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.countrycare-list h3 {
+  margin: 0 0 5px;
+
+  color: var(--white);
+
+  font-size: 0.94rem;
+  line-height: 1.3;
+}
+
+.countrycare-list p {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.uk-impact-section {
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+}
+
+.uk-impact-figure img {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+}
+
+.impact-priorities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 22px;
+}
+
+.impact-priorities span {
+  padding: 7px 11px;
+
+  color: #c9c3cd;
+  background: #121013;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.uk-outcome-section .section-heading {
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.uk-outcome-section .section-heading h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.55rem);
+  white-space: nowrap;
+}
+
+.uk-outcome-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  grid-auto-rows: 270px;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.uk-contribution-grid {
+  grid-template-columns: 1fr;
+}
+
+.uk-contribution-grid article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 0;
+  padding: 11px 18px;
+}
+
+.uk-participation-figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.uk-participation-figure img {
+  height: 100%;
+  min-height: 0;
+
+  background: #e8e8e8;
+  object-fit: contain;
+}
+
+.uk-learning-statement {
+  margin: 16px 0 0;
+  padding: 14px 18px;
+
+  color: var(--text);
+  background: var(--panel);
+  border-left: 3px solid var(--purple-light);
+
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* =========================
+   AMplify Impact Challenge
+   ========================= */
+
+.amplify-project-page .project-introduction h1 {
+  font-size: clamp(2.15rem, 3.55vw, 3.05rem);
+}
+
+.amplify-slide-figure img,
+.amplify-checklist-figure img {
+  background: #f5f5f5;
+  object-fit: contain;
+}
+
+.amplify-project-page .overview-section {
+  grid-template-columns: minmax(390px, 1.2fr) minmax(0, 0.8fr);
+  gap: 38px;
+}
+
+.amplify-slide-figure img {
+  max-height: 500px;
+}
+
+.amplify-problem-section .overview-content h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.55rem);
+  white-space: nowrap;
+}
+
+.amplify-problem-section .overview-content > p:not(.section-label) {
+  line-height: 1.58;
+}
+
+.amplify-problem-section .project-facts {
+  margin-top: 22px;
+}
+
+.amplify-problem-section .project-facts dd {
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.amplify-strategy-section .section-heading {
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.amplify-strategy-section .section-heading h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.55rem);
+  white-space: nowrap;
+}
+
+.amplify-strategy-section .section-introduction {
+  white-space: nowrap;
+}
+
+.amplify-strategy-layout {
+  display: grid;
+  grid-template-columns: minmax(390px, 1.15fr) minmax(0, 0.85fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.amplify-checklist-figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.amplify-checklist-figure img {
+  width: 100%;
+  height: 100%;
+  min-height: 315px;
+}
+
+.amplify-checklist-list {
+  display: grid;
+  gap: 1px;
+
+  padding: 1px;
+
+  background: var(--border);
+}
+
+.amplify-checklist-list article {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: start;
+
+  padding: 14px 17px;
+
+  background: var(--panel);
+}
+
+.amplify-checklist-list article > span {
+  padding-top: 3px;
+
+  color: var(--purple-light);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.amplify-checklist-list h3 {
+  margin: 0 0 6px;
+
+  font-size: 0.96rem;
+  line-height: 1.3;
+}
+
+.amplify-checklist-list p {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.amplify-presentation-section {
+  grid-template-columns: minmax(0, 0.95fr) minmax(380px, 1.05fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.amplify-presentation-section .data-copy h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.55rem);
+  white-space: nowrap;
+}
+
+.amplify-presentation-section .data-copy > p:not(.section-label) {
+  line-height: 1.62;
+}
+
+.amplify-video-card {
+  align-self: center;
+  justify-self: end;
+
+  width: 100%;
+  max-width: 560px;
+}
+
+.amplify-contribution-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.amplify-contribution-grid article {
+  min-height: 205px;
+}
+
+.amplify-learning-statement {
+  margin: 20px 0 0;
+  padding: 17px 20px;
+
+  color: var(--text);
+  background: var(--panel);
+  border-left: 3px solid var(--purple-light);
+
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.amplify-outcome-section .project-ending {
+  margin-top: 28px;
 }
 
 /* =========================
@@ -1612,6 +1996,14 @@ a.all-projects-card:focus-visible {
     font-size: clamp(1.95rem, 9.5vw, 2.9rem);
   }
 
+  .uk-chapter-project-page .project-introduction h1 {
+    font-size: clamp(1.9rem, 9.2vw, 2.8rem);
+  }
+
+  .amplify-project-page .project-introduction h1 {
+    font-size: clamp(1.9rem, 9.2vw, 2.8rem);
+  }
+
   .overview-section,
   .data-section {
     grid-template-columns: 1fr;
@@ -1653,8 +2045,68 @@ a.all-projects-card:focus-visible {
   .evidence-grid,
   .traffic-state-grid,
   .testing-evidence,
-  .outcome-layout {
+  .outcome-layout,
+  .uk-solution-layout,
+  .uk-outcome-layout,
+  .amplify-strategy-layout,
+  .amplify-presentation-section {
     grid-template-columns: 1fr;
+  }
+
+  .uk-outcome-layout {
+    grid-auto-rows: auto;
+  }
+
+  .amplify-contribution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amplify-project-page .overview-section {
+    grid-template-columns: 1fr;
+  }
+
+  .amplify-checklist-figure img {
+    height: auto;
+    min-height: 0;
+    max-height: 520px;
+  }
+
+  .uk-solution-section .section-heading h2,
+  .uk-outcome-section .section-heading h2,
+  .amplify-problem-section .overview-content h2,
+  .amplify-strategy-section .section-heading h2,
+  .amplify-presentation-section .data-copy h2,
+  .amplify-strategy-section .section-introduction {
+    white-space: normal;
+  }
+
+  .amplify-problem-section .project-facts dd {
+    white-space: normal;
+  }
+
+  .uk-participation-figure img {
+    height: auto;
+  }
+
+  .amplify-video-card {
+    justify-self: stretch;
+
+    max-width: none;
+  }
+
+  .amplify-outcome-section .project-ending {
+    margin-top: 48px;
+  }
+
+  .traffic-result-grid span {
+    white-space: normal;
+  }
+
+  .uk-countrycare-figure img,
+  .uk-participation-figure img {
+    height: auto;
+    min-height: 0;
+    max-height: 520px;
   }
 
   .traffic-overview-figure img {

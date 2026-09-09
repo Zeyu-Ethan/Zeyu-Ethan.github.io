@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Smart Electronic Toy Racetrack System developed by Zeyu Lin as team leader and timer subsystem lead."
+    content="Smart Electronic Toy Racetrack System developed by Zeyu Lin as group coordinator and timer subsystem lead."
   >
 
   <title>Smart Electronic Toy Racetrack System | Zeyu Lin</title>
@@ -111,7 +111,7 @@
         <p class="eyebrow">Electronic Product Development · Group Project · 2026</p>
         <h1>Smart Electronic Toy Racetrack System</h1>
         <p class="project-lead">
-          A four-person electronics project integrating race timing, lap counting and a laser-cut enclosure.
+          A four-person system combining car detection, lap counting, race timing and warning/reset control.
         </p>
 
         <div class="project-actions">
@@ -140,13 +140,13 @@
         <figure class="prototype-figure racetrack-system-figure">
           <img
             src="../assets/images/racetrack/final-system.jpg"
-            alt="Final toy racetrack electronic system mounted in its laser-cut enclosure"
+            alt="Toy racetrack electronic prototype positioned inside its laser-cut enclosure"
             data-lightbox
             tabindex="0"
           >
           <figcaption>
-            Final enclosure showing the lap counter, timer displays,
-            warning controls and reset controls.
+            Prototype enclosure showing the sensor, lap counter, timer,
+            warning and reset subsystems in their planned positions.
           </figcaption>
         </figure>
 
@@ -155,21 +155,22 @@
           <h2>A coordinated multi-subsystem electronic product</h2>
 
           <p>
-            The team developed an electronic control system for a toy
-            racetrack. Its front panel brought together lap counting,
-            race timing, warning functions and user reset controls.
+            The team designed four linked subsystems for a toy racetrack.
+            An LDR sensor detected the car at the start point, while the
+            other circuits measured elapsed time, counted laps and
+            provided warning and reset functions.
           </p>
 
           <p>
-            As team leader and timer subsystem lead, I managed
-            planning and technical coordination while taking the timer
-            from circuit simulation through PCB assembly and testing.
+            As group coordinator and timer subsystem lead, I managed
+            project planning and coordination while taking the timer
+            from Multisim design through breadboard and PCB testing.
           </p>
 
           <dl class="project-facts">
             <div>
               <dt>Role</dt>
-              <dd>Team leader</dd>
+              <dd>Group coordinator</dd>
             </div>
             <div>
               <dt>Technical lead</dt>
@@ -191,11 +192,12 @@
       <section class="content-section racetrack-evidence-section" id="design">
         <div class="section-heading">
           <p class="section-label">Timer subsystem design</p>
-          <h2>Designing a multi-digit race timer</h2>
+          <h2>Designing a 9:59 elapsed-time timer</h2>
           <p class="section-introduction">
             The design combined a 555 timer clock with 74LS90 counters,
             74LS47 decoder-drivers and seven-segment displays. Separate
-            counting stages produced the timer digits and reset behaviour.
+            stages counted units of seconds, tens of seconds and minutes,
+            with automatic rollover and manual reset logic.
           </p>
         </div>
 
@@ -264,15 +266,16 @@
           <h2>Verifying clock and counter stages</h2>
 
           <p>
-            I tested the timer progressively instead of assembling the
-            complete circuit at once. Clock generation, individual digit
-            counting and display decoding were checked as separate stages.
+            I tested the timer progressively: first the approximately
+            1 Hz clock, then individual digit counting, display decoding
+            and the complete three-stage sequence.
           </p>
 
           <p>
-            An oscilloscope, logic probe and multimeter helped isolate
-            wiring, signal and component faults before the design moved
-            from breadboard to PCB.
+            Measurements exposed unstable breadboard power distribution
+            and incorrect 74LS90 reset-pin behaviour on the PCB. After I
+            grounded the reset pins with a jumper, the PCB counted
+            correctly; the onboard reset remained a future improvement.
           </p>
         </div>
 
@@ -339,15 +342,22 @@
             <h2>Leading design and delivery</h2>
 
             <p>
-              Alongside the timer work, I coordinated the Gantt chart,
-              block diagram, team reporting and technical integration.
-              I also produced the enclosure design for laser cutting.
+              Alongside the timer work, I prepared the Gantt chart and
+              complete-system block diagram, coordinated progress, created
+              the enclosure CAD and completed the first report integration.
             </p>
 
             <p>
-              The team completed the subsystem designs, prototype
-              demonstrations and final group report. My timer PCB and
-              breadboard prototype both operated successfully.
+              My timer worked on breadboard and the PCB counted correctly
+              after the reset-pin fault was traced and modified. The
+              laser-cut enclosure also accommodated all four subsystems.
+            </p>
+
+            <p>
+              The subsystems were tested individually and partially
+              integrated. The final assembly demonstrated the intended
+              product structure, while full-system verification remained
+              further work.
             </p>
           </div>
 
@@ -528,6 +538,26 @@
         behavior: "smooth"
       });
     }
+
+    // Use the same centred positioning for introduction buttons and side navigation.
+    const sectionActionLinks = Array.from(
+      document.querySelectorAll('.project-actions a[href^="#"]')
+    );
+
+    sectionActionLinks.forEach(function (actionLink) {
+      actionLink.addEventListener("click", function (event) {
+        const targetId = actionLink.getAttribute("href").slice(1);
+        const targetIndex = navigationStops.findIndex(function (section) {
+          return section.id === targetId;
+        });
+
+        if (targetIndex !== -1) {
+          event.preventDefault();
+          setActiveSection(targetIndex);
+          scrollToSection(targetIndex);
+        }
+      });
+    });
 
     sectionDots.forEach(function (dot, index) {
       dot.addEventListener("click", function () {

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="UK Chapter Design Challenge 2026 project developed by Zeyu Lin with a five-person team."
+  >
+
+  <title>UK Chapter Design Challenge 2026 | Zeyu Lin</title>
+  <link rel="stylesheet" href="../project.css">
+</head>
+
+<body class="uk-chapter-project-page">
+  <!-- Shared portfolio header and contact menu -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-identity">
+        <a class="site-name" href="../index.html">Zeyu Lin</a>
+        <span class="profile-summary">
+          Electronic &amp; Electrical Engineering · University of Hertfordshire
+        </span>
+      </div>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="../index.html">Portfolio</a>
+        <a
+          class="nav-link"
+          href="https://github.com/Zeyu-Ethan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <div class="contact-menu">
+          <button
+            class="contact-toggle"
+            id="contact-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="contact-panel"
+          >
+            Contact
+          </button>
+
+          <div
+            class="contact-panel"
+            id="contact-panel"
+            aria-label="Contact information"
+          >
+            <div class="contact-row">
+              <span class="contact-type">Email</span>
+              <a
+                class="contact-email"
+                href="mailto:zeyuethanlin@gmail.com"
+                draggable="false"
+              >
+                zeyuethanlin@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Five-page navigation for the complete project story -->
+  <nav class="section-navigation" aria-label="UK Chapter project sections">
+    <div class="section-dots">
+      <button class="section-dot is-active" type="button" data-target="introduction" aria-label="Go to Project introduction" aria-current="true">
+        <span>Project introduction</span>
+      </button>
+      <button class="section-dot" type="button" data-target="context" aria-label="Go to Context and need">
+        <span>Context and need</span>
+      </button>
+      <button class="section-dot" type="button" data-target="solution" aria-label="Go to CountryCare Kit">
+        <span>CountryCare Kit</span>
+      </button>
+      <button class="section-dot" type="button" data-target="impact" aria-label="Go to Impact and risks">
+        <span>Impact and risks</span>
+      </button>
+      <button class="section-dot" type="button" data-target="outcome" aria-label="Go to Contribution and outcome">
+        <span>Contribution and outcome</span>
+      </button>
+    </div>
+
+    <div class="section-arrows" aria-label="Move between project sections">
+      <button class="section-arrow" id="previous-section" type="button" aria-label="Previous project section" title="Previous section">
+        <span aria-hidden="true">&#8593;</span>
+      </button>
+      <button class="section-arrow" id="next-section" type="button" aria-label="Next project section" title="Next section">
+        <span aria-hidden="true">&#8595;</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="project-page">
+    <div class="project-shell">
+      <a class="back-link" href="../index.html">
+        <span aria-hidden="true">←</span>
+        Back to all projects
+      </a>
+
+      <!-- Project title, summary and primary actions -->
+      <section class="project-introduction" id="introduction">
+        <p class="eyebrow">Engineers Without Borders UK · Five-person team · March 2026</p>
+        <h1>UK Chapter Design Challenge 2026</h1>
+        <p class="project-lead">
+          A user-centred concept for safer healthcare triage and follow-up in remote Cape York communities.
+        </p>
+
+        <div class="project-actions">
+          <a class="primary-button" href="#solution">
+            View CountryCare Kit
+            <span aria-hidden="true">↓</span>
+          </a>
+          <a class="secondary-button" href="#outcome">
+            View Participation Evidence
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <ul class="technology-list" aria-label="Design methods and project activities">
+          <li>User-Centred Design</li>
+          <li>Risk Assessment</li>
+          <li>Cost Planning</li>
+          <li>Implementation Strategy</li>
+          <li>Presentation</li>
+        </ul>
+      </section>
+
+      <!-- Cape York context and design requirements -->
+      <section class="overview-section uk-context-section" id="context">
+        <figure class="prototype-figure uk-slide-figure">
+          <img
+            src="../assets/images/uk-chapter/context-and-needs.png"
+            alt="Presentation slide explaining healthcare access challenges in Cape York"
+            data-lightbox
+            tabindex="0"
+          >
+          <figcaption>
+            Cape York context: long travel distances, seasonal isolation,
+            limited health staff and unreliable connectivity.
+          </figcaption>
+        </figure>
+
+        <div class="overview-content">
+          <p class="section-label">Context and need</p>
+          <h2>Designing for isolation and limited connectivity</h2>
+
+          <p>
+            Remote homelands in Cape York can face long travel distances,
+            while the wet season may isolate communities for weeks. Limited
+            on-site health staff and patchy connectivity further restrict
+            access to timely support.
+          </p>
+
+          <p>
+            The team focused on earlier action, safer triage and stronger
+            follow-up without assuming permanent internet access.
+          </p>
+
+          <dl class="project-facts">
+            <div>
+              <dt>Role</dt>
+              <dd>Core contributor and presenter</dd>
+            </div>
+            <div>
+              <dt>Team</dt>
+              <dd>Five people</dd>
+            </div>
+            <div>
+              <dt>Design context</dt>
+              <dd>Cape York, Australia</dd>
+            </div>
+            <div>
+              <dt>Event location</dt>
+              <dd>Birmingham, UK</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Four-part CountryCare Kit concept -->
+      <section class="content-section uk-solution-section" id="solution">
+        <div class="section-heading">
+          <p class="section-label">Proposed solution</p>
+          <h2>One connected remote-care pathway</h2>
+          <p class="section-introduction">
+            Four linked elements address access, local capability, escalation
+            and operational resilience in the Cape York context.
+          </p>
+        </div>
+
+        <div class="uk-solution-layout">
+          <figure class="evidence-card uk-countrycare-figure">
+            <img
+              src="../assets/images/uk-chapter/countrycare-kit.png"
+              alt="Presentation slide showing the four-part CountryCare Kit concept"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>CountryCare Kit concept developed for remote Cape York communities.</figcaption>
+          </figure>
+
+          <ol class="countrycare-list">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Accessible first response</h3>
+                <p>
+                  Pictorial triage and offline guidance support early action
+                  without continuous connectivity.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Local capability</h3>
+                <p>
+                  Short training modules help community navigators apply the
+                  triage process when health staff are not on site.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Structured escalation</h3>
+                <p>
+                  Standardised notes and photos enable clearer telehealth
+                  handover when a signal is available.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <h3>Operational resilience</h3>
+                <p>
+                  Rugged equipment, solar charging and modular spares reduce
+                  dependence on local infrastructure.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Expected impact and delivery risks -->
+      <section class="data-section uk-impact-section" id="impact">
+        <div class="data-copy">
+          <p class="section-label">Impact and risks</p>
+          <h2>Balancing healthcare impact with delivery constraints</h2>
+
+          <p>
+            The proposal aimed to reduce unnecessary trips off Country,
+            accelerate escalation for high-risk cases and improve follow-up
+            for chronic, maternal and child health.
+          </p>
+
+          <p>
+            Scope creep, device failure and low adoption were identified as
+            key risks so that mitigation could be considered within the
+            implementation strategy.
+          </p>
+
+          <div class="impact-priorities" aria-label="Expected project impact">
+            <span>Earlier action</span>
+            <span>Safer triage</span>
+            <span>Better follow-up</span>
+          </div>
+        </div>
+
+        <figure class="data-figure uk-impact-figure">
+          <img
+            src="../assets/images/uk-chapter/impact-and-risks.png"
+            alt="Presentation slide summarising expected impact and key risks"
+            data-lightbox
+            tabindex="0"
+          >
+          <figcaption>Expected impact, key risks and evidence used in the proposal.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Individual contribution, presentation and project navigation -->
+      <section class="engineering-section uk-outcome-section" id="outcome">
+        <div class="section-heading">
+          <p class="section-label">Contribution and outcome</p>
+          <h2>Developing and presenting the concept</h2>
+        </div>
+
+        <div class="uk-outcome-layout">
+          <div class="decision-grid uk-contribution-grid">
+            <article>
+              <h3>Initial concept</h3>
+              <p>
+                Proposed the barefoot-doctor model as the starting point for
+                locally supported healthcare.
+              </p>
+            </article>
+
+            <article>
+              <h3>Planning</h3>
+              <p>
+                Contributed to risk analysis, cost planning, implementation strategy and speaker notes.
+              </p>
+            </article>
+
+            <article>
+              <h3>Presentation</h3>
+              <p>
+                Developed supporting visuals and participated in the final presentation.
+              </p>
+            </article>
+          </div>
+
+          <figure class="evidence-card uk-participation-figure">
+            <img
+              src="../assets/images/uk-chapter/participation.jpg"
+              alt="Zeyu Lin participant identification for the UK Chapter Design Challenge 2026"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Evidence of participation in the UK Chapter Design Challenge 2026.</figcaption>
+          </figure>
+        </div>
+
+        <p class="uk-learning-statement">
+          The project developed my user-centred design, risk assessment, cost planning and presentation skills.
+        </p>
+
+        <div class="project-ending">
+          <nav class="project-switcher" aria-label="Browse portfolio projects">
+            <a
+              class="project-switch-card project-switch-previous"
+              href="traffic-light.html"
+              aria-label="Previous project: JK Flip-Flop Traffic Light Controller"
+            >
+              <span class="project-switch-direction">
+                <span aria-hidden="true">←</span>
+                Previous project
+              </span>
+              <strong>Traffic Light</strong>
+            </a>
+
+            <a class="project-switch-card all-projects-card" href="../index.html">
+              <span>All Projects</span>
+            </a>
+
+            <a
+              class="project-switch-card project-switch-next"
+              href="amplify.html"
+              aria-label="Next project: AMplify Impact Challenge 2026"
+            >
+              <span class="project-switch-direction">
+                Next project
+                <span aria-hidden="true">→</span>
+              </span>
+              <strong>AMplify</strong>
+            </a>
+          </nav>
+
+          <footer class="site-footer">
+            <p>© 2026 Zeyu Lin</p>
+          </footer>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Full-viewport image viewer with zoom and drag controls -->
+  <div
+    class="image-lightbox"
+    id="image-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded project image"
+    hidden
+  >
+    <div class="lightbox-toolbar" aria-label="Image controls">
+      <button id="lightbox-zoom-out" type="button" aria-label="Zoom out">−</button>
+      <button id="lightbox-reset" type="button" aria-label="Reset zoom">100%</button>
+      <button id="lightbox-zoom-in" type="button" aria-label="Zoom in">+</button>
+      <button id="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+    </div>
+
+    <div class="lightbox-stage" id="lightbox-stage">
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </div>
+
+  <script>
+    // Keep the contact panel usable with mouse, keyboard and touch input.
+    const contactMenu = document.querySelector(".contact-menu");
+    const contactToggle = document.getElementById("contact-toggle");
+
+    function closeContactMenu() {
+      contactMenu.classList.remove("is-open");
+      contactToggle.setAttribute("aria-expanded", "false");
+    }
+
+    contactToggle.addEventListener("click", function (event) {
+      event.stopPropagation();
+      const willOpen = !contactMenu.classList.contains("is-open");
+
+      contactMenu.classList.toggle("is-open", willOpen);
+      contactToggle.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!contactMenu.contains(event.target)) {
+        closeContactMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && contactMenu.classList.contains("is-open")) {
+        closeContactMenu();
+        contactToggle.focus();
+      }
+    });
+
+    // Connect all five navigation dots to the complete page structure.
+    const sectionDots = Array.from(document.querySelectorAll(".section-dot"));
+    const navigationStops = sectionDots.map(function (dot) {
+      return document.getElementById(dot.dataset.target);
+    });
+    const previousSectionButton = document.getElementById("previous-section");
+    const nextSectionButton = document.getElementById("next-section");
+    let activeNavigationIndex = 0;
+
+    function setActiveSection(index) {
+      activeNavigationIndex = index;
+
+      sectionDots.forEach(function (dot, dotIndex) {
+        const isActive = dotIndex === index;
+        dot.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+
+      previousSectionButton.disabled = index === 0;
+      nextSectionButton.disabled = index === navigationStops.length - 1;
+    }
+
+    function scrollToSection(index) {
+      if (index === 0) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const targetSection = navigationStops[index];
+      const sectionBounds = targetSection.getBoundingClientRect();
+      const sectionTop = window.scrollY + sectionBounds.top;
+      const centredPosition =
+        sectionTop + targetSection.offsetHeight / 2 - window.innerHeight / 2;
+
+      window.scrollTo({
+        top: Math.max(0, centredPosition),
+        behavior: "smooth"
+      });
+    }
+
+    // Use the same centred positioning for introduction buttons and side navigation.
+    const sectionActionLinks = Array.from(
+      document.querySelectorAll('.project-actions a[href^="#"]')
+    );
+
+    sectionActionLinks.forEach(function (actionLink) {
+      actionLink.addEventListener("click", function (event) {
+        const targetId = actionLink.getAttribute("href").slice(1);
+        const targetIndex = navigationStops.findIndex(function (section) {
+          return section.id === targetId;
+        });
+
+        if (targetIndex !== -1) {
+          event.preventDefault();
+          setActiveSection(targetIndex);
+          scrollToSection(targetIndex);
+        }
+      });
+    });
+
+    sectionDots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        setActiveSection(index);
+        scrollToSection(index);
+      });
+    });
+
+    previousSectionButton.addEventListener("click", function () {
+      if (activeNavigationIndex > 0) {
+        setActiveSection(activeNavigationIndex - 1);
+        scrollToSection(activeNavigationIndex);
+      }
+    });
+
+    nextSectionButton.addEventListener("click", function () {
+      if (activeNavigationIndex < navigationStops.length - 1) {
+        setActiveSection(activeNavigationIndex + 1);
+        scrollToSection(activeNavigationIndex);
+      }
+    });
+
+    // Highlight the section whose centre is nearest the viewport centre.
+    function updateActiveSectionFromScroll() {
+      let nearestIndex = 0;
+      let nearestDistance = Number.POSITIVE_INFINITY;
+
+      navigationStops.forEach(function (section, index) {
+        const sectionBounds = section.getBoundingClientRect();
+        const sectionPosition = sectionBounds.top + sectionBounds.height / 2;
+        const distance = Math.abs(sectionPosition - window.innerHeight / 2);
+
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIndex = index;
+        }
+      });
+
+      if (nearestIndex !== activeNavigationIndex) {
+        setActiveSection(nearestIndex);
+      }
+    }
+
+    let scrollUpdateRequested = false;
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!scrollUpdateRequested) {
+          window.requestAnimationFrame(function () {
+            updateActiveSectionFromScroll();
+            scrollUpdateRequested = false;
+          });
+
+          scrollUpdateRequested = true;
+        }
+      },
+      { passive: true }
+    );
+
+    setActiveSection(0);
+    updateActiveSectionFromScroll();
+  </script>
+  <script src="../project-lightbox.js"></script>
+</body>
+</html>

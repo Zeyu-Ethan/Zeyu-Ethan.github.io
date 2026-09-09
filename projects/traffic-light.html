@@ -148,7 +148,7 @@
           >
           <figcaption>
             Multisim controller operating with one direction active and
-            all conflicting directions held red.
+            the other three directions held red.
           </figcaption>
         </figure>
 
@@ -157,9 +157,9 @@
           <h2>Coordinating four directions through eight states</h2>
 
           <p>
-            The controller sequences the south, east, north and west
-            approaches. Each direction receives a green phase followed
-            by yellow while every conflicting direction remains red.
+            The controller cycles through green and yellow phases for the
+            south, east, north and west approaches. In every state, the
+            other three approaches remain red.
           </p>
 
           <p>
@@ -429,18 +429,17 @@
               <span>All Projects</span>
             </a>
 
-            <span
-              class="project-switch-card project-switch-next is-unavailable"
-              role="link"
-              aria-disabled="true"
-              aria-label="Next project: UK Chapter Design Challenge. Project page not yet available."
+            <a
+              class="project-switch-card project-switch-next"
+              href="uk-chapter.html"
+              aria-label="Next project: UK Chapter Design Challenge 2026"
             >
               <span class="project-switch-direction">
                 Next project
                 <span aria-hidden="true">→</span>
               </span>
               <strong>UK Chapter</strong>
-            </span>
+            </a>
           </nav>
 
           <footer class="site-footer">
@@ -559,6 +558,26 @@
         behavior: "smooth"
       });
     }
+
+    // Use the same centred positioning for introduction buttons and side navigation.
+    const sectionActionLinks = Array.from(
+      document.querySelectorAll('.project-actions a[href^="#"]')
+    );
+
+    sectionActionLinks.forEach(function (actionLink) {
+      actionLink.addEventListener("click", function (event) {
+        const targetId = actionLink.getAttribute("href").slice(1);
+        const targetIndex = navigationStops.findIndex(function (section) {
+          return section.id === targetId;
+        });
+
+        if (targetIndex !== -1) {
+          event.preventDefault();
+          setActiveSection(targetIndex);
+          scrollToSection(targetIndex);
+        }
+      });
+    });
 
     sectionDots.forEach(function (dot, index) {
       dot.addEventListener("click", function () {

@@ -360,11 +360,11 @@
             <div class="stage-marker">V1</div>
 
             <div>
-              <h3>Sensor and output prototype</h3>
+              <h3>Hardware alarm prototype</h3>
 
               <p>
-                Established the ESP32 hardware setup, read analogue LDR
-                values and verified LED output through repeatable tests.
+                Built the analogue LDR alarm with threshold confirmation
+                and DIP-switch control of the alarm, LED and buzzer.
               </p>
             </div>
           </article>
@@ -373,12 +373,12 @@
             <div class="stage-marker">V2</div>
 
             <div>
-              <h3>Integrated alarm controls</h3>
+              <h3>AO and DO comparison</h3>
 
               <p>
-                Added threshold-based alarm behaviour, button
-                debouncing and independent control of LED and buzzer
-                outputs.
+                Compared continuous AO readings with the module's
+                HIGH/LOW DO signal to distinguish software thresholding
+                from the hardware comparator output.
               </p>
             </div>
           </article>
@@ -514,18 +514,17 @@
 
         <div class="project-ending">
           <nav class="project-switcher" aria-label="Browse portfolio projects">
-            <span
-              class="project-switch-card project-switch-previous is-unavailable"
-              role="link"
-              aria-disabled="true"
-              aria-label="Previous project: AMplify Impact Challenge. Project page not yet available."
+            <a
+              class="project-switch-card project-switch-previous"
+              href="amplify.html"
+              aria-label="Previous project: AMplify Impact Challenge 2026"
             >
               <span class="project-switch-direction">
                 <span aria-hidden="true">←</span>
                 Previous project
               </span>
               <strong>AMplify</strong>
-            </span>
+            </a>
 
             <a class="project-switch-card all-projects-card" href="../index.html">
               <span>All Projects</span>
@@ -665,6 +664,26 @@
         behavior: "smooth"
       });
     }
+
+    // Use the same centred positioning for introduction buttons and side navigation.
+    const sectionActionLinks = Array.from(
+      document.querySelectorAll('.project-actions a[href^="#"]')
+    );
+
+    sectionActionLinks.forEach(function (actionLink) {
+      actionLink.addEventListener("click", function (event) {
+        const targetId = actionLink.getAttribute("href").slice(1);
+        const targetIndex = navigationStops.findIndex(function (section) {
+          return section.id === targetId;
+        });
+
+        if (targetIndex !== -1) {
+          event.preventDefault();
+          setActiveSection(targetIndex);
+          scrollToSection(targetIndex);
+        }
+      });
+    });
 
     sectionDots.forEach(function (dot, index) {
       dot.addEventListener("click", function () {
