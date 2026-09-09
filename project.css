@@ -1350,9 +1350,10 @@ body.lightbox-open {
 
 .project-switcher {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: repeat(3, 172px);
   gap: 10px;
-  align-items: center;
+  align-items: stretch;
+  justify-content: space-between;
 
   width: 100%;
 }
@@ -1364,6 +1365,7 @@ body.lightbox-open {
   justify-content: center;
 
   min-height: 66px;
+  width: 100%;
   padding: 11px 15px;
 
   color: #d0cbd3;
@@ -1412,8 +1414,6 @@ a.project-switch-card:focus-visible {
 .all-projects-card {
   align-items: center;
 
-  min-width: 150px;
-
   color: var(--white);
   background: var(--purple);
   border-color: var(--purple);
@@ -1440,6 +1440,98 @@ a.all-projects-card:focus-visible {
 
 .project-switch-card.is-unavailable .project-switch-direction {
   color: #5e5962;
+}
+
+/* =========================
+   Traffic light project
+   ========================= */
+
+.traffic-light-project-page .project-introduction h1 {
+  font-size: clamp(2.15rem, 3.55vw, 3.05rem);
+}
+
+.traffic-overview-figure img {
+  height: clamp(350px, 48vh, 470px);
+  max-height: none;
+
+  background: #080809;
+  object-fit: contain;
+}
+
+.traffic-light-project-page .overview-section {
+  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+  gap: 52px;
+}
+
+.traffic-evidence-section .section-heading {
+  max-width: 900px;
+  margin-bottom: 26px;
+}
+
+.traffic-state-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+  gap: 16px;
+}
+
+.traffic-state-grid .evidence-card img {
+  height: 330px;
+}
+
+.traffic-state-table-card img {
+  padding: 18px;
+}
+
+.traffic-equation-grid .evidence-card img {
+  height: min(55vh, 470px);
+}
+
+.traffic-verification-section {
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+}
+
+.traffic-verification-grid .evidence-card img {
+  height: 245px;
+}
+
+.traffic-video-evidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(210px, 0.92fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.traffic-simulation-video-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.traffic-simulation-video-card .video-card-copy {
+  min-height: 76px;
+}
+
+.traffic-video-image-stack {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.traffic-video-image-stack .evidence-card {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.traffic-video-image-stack .evidence-card img {
+  height: 108px;
+}
+
+.traffic-result-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.traffic-result-grid span {
+  max-width: 210px;
+  line-height: 1.35;
 }
 
 /* =========================
@@ -1516,6 +1608,10 @@ a.all-projects-card:focus-visible {
     font-size: clamp(2rem, 10vw, 3rem);
   }
 
+  .traffic-light-project-page .project-introduction h1 {
+    font-size: clamp(1.95rem, 9.5vw, 2.9rem);
+  }
+
   .overview-section,
   .data-section {
     grid-template-columns: 1fr;
@@ -1555,9 +1651,30 @@ a.all-projects-card:focus-visible {
 
   .video-grid,
   .evidence-grid,
+  .traffic-state-grid,
   .testing-evidence,
   .outcome-layout {
     grid-template-columns: 1fr;
+  }
+
+  .traffic-overview-figure img {
+    height: auto;
+    max-height: 520px;
+  }
+
+  .traffic-state-grid .evidence-card img,
+  .traffic-equation-grid .evidence-card img,
+  .traffic-verification-grid .evidence-card img {
+    height: min(68vw, 390px);
+  }
+
+  .traffic-video-image-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+
+  .traffic-video-image-stack .evidence-card img {
+    height: min(34vw, 220px);
   }
 
   .video-embed-vertical {
@@ -1659,19 +1776,7 @@ a.all-projects-card:focus-visible {
   }
 
   .project-switcher {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .all-projects-card {
-    grid-column: 1 / -1;
-    grid-row: 1;
-
-    min-width: 0;
-  }
-
-  .project-switch-previous,
-  .project-switch-next {
-    grid-row: 2;
+    grid-template-columns: 1fr;
   }
 
   .result-grid {

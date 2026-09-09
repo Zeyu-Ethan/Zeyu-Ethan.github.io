@@ -18,7 +18,7 @@ const projects = [
   {
     image: "assets/images/covers/traffic-light-cover.png",
     alt: "JK Flip-Flop Traffic Light Controller",
-    url: null,
+    url: "projects/traffic-light.html",
     summary:
       "JK Flip-Flop Traffic Light Controller — Eight-state sequential controller designed and verified in Multisim.",
     gradient: "65, 61, 72"

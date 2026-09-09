@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="JK Flip-Flop Traffic Light Controller designed and simulated by Zeyu Lin."
+  >
+
+  <title>JK Flip-Flop Traffic Light Controller | Zeyu Lin</title>
+  <link rel="stylesheet" href="../project.css">
+</head>
+
+<body class="traffic-light-project-page">
+  <!-- Shared portfolio header and contact menu -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-identity">
+        <a class="site-name" href="../index.html">Zeyu Lin</a>
+        <span class="profile-summary">
+          Electronic &amp; Electrical Engineering · University of Hertfordshire
+        </span>
+      </div>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="../index.html">Portfolio</a>
+        <a
+          class="nav-link"
+          href="https://github.com/Zeyu-Ethan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <div class="contact-menu">
+          <button
+            class="contact-toggle"
+            id="contact-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="contact-panel"
+          >
+            Contact
+          </button>
+
+          <div
+            class="contact-panel"
+            id="contact-panel"
+            aria-label="Contact information"
+          >
+            <div class="contact-row">
+              <span class="contact-type">Email</span>
+              <a
+                class="contact-email"
+                href="mailto:zeyuethanlin@gmail.com"
+                draggable="false"
+              >
+                zeyuethanlin@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seven-page navigation for the complete project story -->
+  <nav class="section-navigation" aria-label="Traffic light project sections">
+    <div class="section-dots">
+      <button class="section-dot is-active" type="button" data-target="introduction" aria-label="Go to Project introduction" aria-current="true">
+        <span>Project introduction</span>
+      </button>
+      <button class="section-dot" type="button" data-target="overview" aria-label="Go to Project overview">
+        <span>Project overview</span>
+      </button>
+      <button class="section-dot" type="button" data-target="state-model" aria-label="Go to State model">
+        <span>State model</span>
+      </button>
+      <button class="section-dot" type="button" data-target="logic" aria-label="Go to Logic derivation">
+        <span>Logic derivation</span>
+      </button>
+      <button class="section-dot" type="button" data-target="implementation" aria-label="Go to Circuit implementation">
+        <span>Circuit implementation</span>
+      </button>
+      <button class="section-dot" type="button" data-target="verification" aria-label="Go to Simulation verification">
+        <span>Simulation verification</span>
+      </button>
+      <button class="section-dot" type="button" data-target="outcome" aria-label="Go to Engineering outcome">
+        <span>Engineering outcome</span>
+      </button>
+    </div>
+
+    <div class="section-arrows" aria-label="Move between project sections">
+      <button class="section-arrow" id="previous-section" type="button" aria-label="Previous project section" title="Previous section">
+        <span aria-hidden="true">&#8593;</span>
+      </button>
+      <button class="section-arrow" id="next-section" type="button" aria-label="Next project section" title="Next section">
+        <span aria-hidden="true">&#8595;</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="project-page">
+    <div class="project-shell">
+      <a class="back-link" href="../index.html">
+        <span aria-hidden="true">←</span>
+        Back to all projects
+      </a>
+
+      <!-- Project title, summary and primary actions -->
+      <section class="project-introduction" id="introduction">
+        <p class="eyebrow">Digital Electronics · Individual Project · 2025</p>
+        <h1>JK Flip-Flop Traffic Light Controller</h1>
+        <p class="project-lead">
+          An eight-state four-way traffic light controller developed from state modelling to Multisim verification.
+        </p>
+
+        <div class="project-actions">
+          <a class="primary-button" href="#state-model">
+            Explore State Design
+            <span aria-hidden="true">↓</span>
+          </a>
+          <a class="secondary-button" href="#verification">
+            Watch Simulation
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <ul class="technology-list" aria-label="Technologies and methods used">
+          <li>JK Flip-Flops</li>
+          <li>Sequential Logic</li>
+          <li>State Tables</li>
+          <li>Karnaugh Maps</li>
+          <li>Multisim</li>
+        </ul>
+      </section>
+
+      <!-- Project overview and controller behaviour -->
+      <section class="overview-section" id="overview">
+        <figure class="prototype-figure traffic-overview-figure">
+          <img
+            src="../assets/images/traffic-light/controller-operation.png"
+            alt="Four-way traffic light controller operating in Multisim"
+            data-lightbox
+            tabindex="0"
+          >
+          <figcaption>
+            Multisim controller operating with one direction active and
+            all conflicting directions held red.
+          </figcaption>
+        </figure>
+
+        <div class="overview-content">
+          <p class="section-label">Project overview</p>
+          <h2>Coordinating four directions through eight states</h2>
+
+          <p>
+            The controller sequences the south, east, north and west
+            approaches. Each direction receives a green phase followed
+            by yellow while every conflicting direction remains red.
+          </p>
+
+          <p>
+            Three JK flip-flops store the encoded state. Combinational
+            output logic then converts each state into the required set
+            of traffic-light signals.
+          </p>
+
+          <dl class="project-facts">
+            <div>
+              <dt>Role</dt>
+              <dd>Individual developer</dd>
+            </div>
+            <div>
+              <dt>Sequence</dt>
+              <dd>Eight states</dd>
+            </div>
+            <div>
+              <dt>State memory</dt>
+              <dd>Three JK flip-flops</dd>
+            </div>
+            <div>
+              <dt>Project result</dt>
+              <dd>74%</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- State diagram and encoded state table -->
+      <section class="content-section traffic-evidence-section" id="state-model">
+        <div class="section-heading">
+          <p class="section-label">State model</p>
+          <h2>Defining the complete operating sequence</h2>
+          <p class="section-introduction">
+            I first represented the required sequence as a state diagram,
+            then assigned a three-bit code to every green and yellow phase.
+            This created a traceable specification for the sequential circuit.
+          </p>
+        </div>
+
+        <div class="traffic-state-grid">
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/traffic-light/state-diagram.jpg"
+              alt="Hand-drawn eight-state diagram for the traffic light controller"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Eight-state sequence covering all four traffic directions.</figcaption>
+          </figure>
+
+          <figure class="evidence-card traffic-state-table-card">
+            <img
+              src="../assets/images/traffic-light/state-table.png"
+              alt="Traffic light state table with meanings and three-bit encodings"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>State meanings and Q2-Q1-Q0 binary encoding from 000 to 111.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Excitation and output equations -->
+      <section class="content-section traffic-evidence-section" id="logic">
+        <div class="section-heading">
+          <p class="section-label">Logic derivation</p>
+          <h2>Deriving excitation and output equations</h2>
+          <p class="section-introduction">
+            JK excitation requirements were obtained from the present and
+            next states. Karnaugh-map simplification was then used to produce
+            practical input equations and traffic-light output logic.
+          </p>
+        </div>
+
+        <div class="evidence-grid traffic-equation-grid">
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/traffic-light/jk-equations.jpg"
+              alt="JK flip-flop excitation tables, Karnaugh maps and simplified equations"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>JK excitation tables and simplified flip-flop input equations.</figcaption>
+          </figure>
+
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/traffic-light/output-equations.jpg"
+              alt="Karnaugh-map derivation of the traffic light output equations"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Output decoding equations derived for the traffic-light phases.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Sequential circuit and complete Multisim implementation -->
+      <section class="content-section traffic-evidence-section" id="implementation">
+        <div class="section-heading">
+          <p class="section-label">Circuit implementation</p>
+          <h2>Building the controller in Multisim</h2>
+          <p class="section-introduction">
+            The three-bit state generator was verified as a separate block
+            before it was connected to the complete four-direction output
+            circuit. A reset input returns the sequence to its initial state.
+          </p>
+        </div>
+
+        <div class="evidence-grid">
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/traffic-light/sequential-circuit.png"
+              alt="Three JK flip-flop sequential state generator in Multisim"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Three-JK-flip-flop state generator and reset input.</figcaption>
+          </figure>
+
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/traffic-light/full-simulation.png"
+              alt="Complete four-way traffic light controller simulation in Multisim"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Complete controller combining state memory and output decoding.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Timing and reset verification -->
+      <section class="data-section traffic-verification-section" id="verification">
+        <div class="data-copy">
+          <p class="section-label">Simulation verification</p>
+          <h2>Checking timing, sequence and reset behaviour</h2>
+
+          <p>
+            Four-channel waveforms were used to check the state-bit timing
+            and confirm the expected frequency division through the sequence.
+          </p>
+
+          <p>
+            The complete controller was then observed across its operating
+            states and reset to confirm that the traffic-light outputs returned
+            to the defined starting condition.
+          </p>
+        </div>
+
+        <div class="testing-evidence traffic-video-evidence">
+          <article class="video-card traffic-simulation-video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/5YJ0Iurep-U"
+                title="JK Flip-Flop Traffic Light Controller eight-state Multisim simulation"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="video-card-copy compact-video-copy">
+              <div>
+                <span class="video-version">Multisim demonstration</span>
+                <h3>Eight-state sequence and reset test</h3>
+              </div>
+
+              <a
+                class="video-external-link"
+                href="https://youtu.be/5YJ0Iurep-U"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <div class="traffic-video-image-stack">
+            <figure class="evidence-card">
+              <img
+                src="../assets/images/traffic-light/timing-waveforms.png"
+                alt="Four-channel oscilloscope waveforms from the traffic light state generator"
+                data-lightbox
+                tabindex="0"
+              >
+              <figcaption>Four-channel timing waveforms from the state generator.</figcaption>
+            </figure>
+
+            <figure class="evidence-card">
+              <img
+                src="../assets/images/traffic-light/reset-operation.png"
+                alt="Traffic light controller returned to the reset state in Multisim"
+                data-lightbox
+                tabindex="0"
+              >
+              <figcaption>Reset verification with the encoded state returned to zero.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design reasoning, results and project navigation -->
+      <section class="engineering-section traffic-outcome-section" id="outcome">
+        <div class="section-heading">
+          <p class="section-label">Engineering outcome</p>
+          <h2>Turning a sequence into verifiable digital logic</h2>
+        </div>
+
+        <div class="decision-grid">
+          <article>
+            <h3>Three-bit state encoding</h3>
+            <p>
+              Eight operating phases fit exactly into three state bits,
+              providing a compact and systematic controller structure.
+            </p>
+          </article>
+
+          <article>
+            <h3>JK excitation method</h3>
+            <p>
+              Excitation tables connected every required state transition
+              to the J and K input conditions needed by each flip-flop.
+            </p>
+          </article>
+
+          <article>
+            <h3>Progressive verification</h3>
+            <p>
+              Checking the state generator before the complete output circuit
+              made sequence and decoding faults easier to isolate.
+            </p>
+          </article>
+        </div>
+
+        <div class="result-grid traffic-result-grid" aria-label="Assessment results">
+          <article>
+            <span>Traffic Light Controller Design</span>
+            <strong>74%</strong>
+          </article>
+          <article>
+            <span>Digital Electronic Circuits</span>
+            <strong>72%</strong>
+          </article>
+        </div>
+
+        <div class="project-ending">
+          <nav class="project-switcher" aria-label="Browse portfolio projects">
+            <a
+              class="project-switch-card project-switch-previous"
+              href="racetrack.html"
+              aria-label="Previous project: Smart Electronic Toy Racetrack System"
+            >
+              <span class="project-switch-direction">
+                <span aria-hidden="true">←</span>
+                Previous project
+              </span>
+              <strong>Racetrack</strong>
+            </a>
+
+            <a class="project-switch-card all-projects-card" href="../index.html">
+              <span>All Projects</span>
+            </a>
+
+            <span
+              class="project-switch-card project-switch-next is-unavailable"
+              role="link"
+              aria-disabled="true"
+              aria-label="Next project: UK Chapter Design Challenge. Project page not yet available."
+            >
+              <span class="project-switch-direction">
+                Next project
+                <span aria-hidden="true">→</span>
+              </span>
+              <strong>UK Chapter</strong>
+            </span>
+          </nav>
+
+          <footer class="site-footer">
+            <p>© 2026 Zeyu Lin</p>
+          </footer>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Full-viewport image viewer with zoom and drag controls -->
+  <div
+    class="image-lightbox"
+    id="image-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded project image"
+    hidden
+  >
+    <div class="lightbox-toolbar" aria-label="Image controls">
+      <button id="lightbox-zoom-out" type="button" aria-label="Zoom out">−</button>
+      <button id="lightbox-reset" type="button" aria-label="Reset zoom">100%</button>
+      <button id="lightbox-zoom-in" type="button" aria-label="Zoom in">+</button>
+      <button id="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+    </div>
+
+    <div class="lightbox-stage" id="lightbox-stage">
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </div>
+
+  <script>
+    // Keep the contact panel usable with mouse, keyboard and touch input.
+    const contactMenu = document.querySelector(".contact-menu");
+    const contactToggle = document.getElementById("contact-toggle");
+
+    function closeContactMenu() {
+      contactMenu.classList.remove("is-open");
+      contactToggle.setAttribute("aria-expanded", "false");
+    }
+
+    contactToggle.addEventListener("click", function (event) {
+      event.stopPropagation();
+      const willOpen = !contactMenu.classList.contains("is-open");
+
+      contactMenu.classList.toggle("is-open", willOpen);
+      contactToggle.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!contactMenu.contains(event.target)) {
+        closeContactMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        contactMenu.classList.contains("is-open")
+      ) {
+        closeContactMenu();
+        contactToggle.focus();
+      }
+    });
+
+    // Connect all seven navigation dots to the complete page structure.
+    const sectionDots = Array.from(
+      document.querySelectorAll(".section-dot")
+    );
+
+    const navigationStops = sectionDots.map(function (dot) {
+      return document.getElementById(dot.dataset.target);
+    });
+
+    const previousSectionButton =
+      document.getElementById("previous-section");
+
+    const nextSectionButton =
+      document.getElementById("next-section");
+
+    let activeNavigationIndex = 0;
+
+    function setActiveSection(index) {
+      activeNavigationIndex = index;
+
+      sectionDots.forEach(function (dot, dotIndex) {
+        const isActive = dotIndex === index;
+
+        dot.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+
+      previousSectionButton.disabled = index === 0;
+      nextSectionButton.disabled = index === navigationStops.length - 1;
+    }
+
+    function scrollToSection(index) {
+      if (index === 0) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const targetSection = navigationStops[index];
+      const sectionBounds = targetSection.getBoundingClientRect();
+      const sectionTop = window.scrollY + sectionBounds.top;
+      const centredPosition =
+        sectionTop + targetSection.offsetHeight / 2 - window.innerHeight / 2;
+
+      window.scrollTo({
+        top: Math.max(0, centredPosition),
+        behavior: "smooth"
+      });
+    }
+
+    sectionDots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        setActiveSection(index);
+        scrollToSection(index);
+      });
+    });
+
+    previousSectionButton.addEventListener("click", function () {
+      if (activeNavigationIndex > 0) {
+        setActiveSection(activeNavigationIndex - 1);
+        scrollToSection(activeNavigationIndex);
+      }
+    });
+
+    nextSectionButton.addEventListener("click", function () {
+      if (activeNavigationIndex < navigationStops.length - 1) {
+        setActiveSection(activeNavigationIndex + 1);
+        scrollToSection(activeNavigationIndex);
+      }
+    });
+
+    // Highlight the section whose centre is nearest the viewport centre.
+    function updateActiveSectionFromScroll() {
+      let nearestIndex = 0;
+      let nearestDistance = Number.POSITIVE_INFINITY;
+
+      navigationStops.forEach(function (section, index) {
+        const sectionBounds = section.getBoundingClientRect();
+        const sectionPosition =
+          sectionBounds.top + sectionBounds.height / 2;
+        const distance = Math.abs(
+          sectionPosition - window.innerHeight / 2
+        );
+
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIndex = index;
+        }
+      });
+
+      if (nearestIndex !== activeNavigationIndex) {
+        setActiveSection(nearestIndex);
+      }
+    }
+
+    let scrollUpdateRequested = false;
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!scrollUpdateRequested) {
+          window.requestAnimationFrame(function () {
+            updateActiveSectionFromScroll();
+            scrollUpdateRequested = false;
+          });
+
+          scrollUpdateRequested = true;
+        }
+      },
+      { passive: true }
+    );
+
+    setActiveSection(0);
+    updateActiveSectionFromScroll();
+  </script>
+  <script src="../project-lightbox.js"></script>
+</body>
+</html>
