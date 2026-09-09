@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Smart Electronic Toy Racetrack System developed by Zeyu Lin as team leader and timer subsystem lead."
+  >
+
+  <title>Smart Electronic Toy Racetrack System | Zeyu Lin</title>
+  <link rel="stylesheet" href="../project.css">
+</head>
+
+<body class="racetrack-project-page">
+  <!-- Shared portfolio header and contact menu -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-identity">
+        <a class="site-name" href="../index.html">Zeyu Lin</a>
+        <span class="profile-summary">
+          Electronic &amp; Electrical Engineering · University of Hertfordshire
+        </span>
+      </div>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="../index.html">Portfolio</a>
+        <a
+          class="nav-link"
+          href="https://github.com/Zeyu-Ethan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <div class="contact-menu">
+          <button
+            class="contact-toggle"
+            id="contact-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="contact-panel"
+          >
+            Contact
+          </button>
+
+          <div
+            class="contact-panel"
+            id="contact-panel"
+            aria-label="Contact information"
+          >
+            <div class="contact-row">
+              <span class="contact-type">Email</span>
+              <a
+                class="contact-email"
+                href="mailto:zeyuethanlin@gmail.com"
+                draggable="false"
+              >
+                zeyuethanlin@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Six-page navigation for the complete project story -->
+  <nav class="section-navigation" aria-label="Racetrack project sections">
+    <div class="section-dots">
+      <button class="section-dot is-active" type="button" data-target="introduction" aria-label="Go to Project introduction" aria-current="true">
+        <span>Project introduction</span>
+      </button>
+      <button class="section-dot" type="button" data-target="overview" aria-label="Go to Project overview">
+        <span>Project overview</span>
+      </button>
+      <button class="section-dot" type="button" data-target="design" aria-label="Go to Timer design">
+        <span>Timer design</span>
+      </button>
+      <button class="section-dot" type="button" data-target="implementation" aria-label="Go to PCB implementation">
+        <span>PCB implementation</span>
+      </button>
+      <button class="section-dot" type="button" data-target="testing" aria-label="Go to Testing and troubleshooting">
+        <span>Testing and troubleshooting</span>
+      </button>
+      <button class="section-dot" type="button" data-target="outcome" aria-label="Go to Coordination and outcome">
+        <span>Coordination and outcome</span>
+      </button>
+    </div>
+
+    <div class="section-arrows" aria-label="Move between project sections">
+      <button class="section-arrow" id="previous-section" type="button" aria-label="Previous project section" title="Previous section">
+        <span aria-hidden="true">&#8593;</span>
+      </button>
+      <button class="section-arrow" id="next-section" type="button" aria-label="Next project section" title="Next section">
+        <span aria-hidden="true">&#8595;</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="project-page">
+    <div class="project-shell">
+      <a class="back-link" href="../index.html">
+        <span aria-hidden="true">←</span>
+        Back to all projects
+      </a>
+
+      <!-- Project title and role summary -->
+      <section class="project-introduction" id="introduction">
+        <p class="eyebrow">Electronic Product Development · Group Project · 2026</p>
+        <h1>Smart Electronic Toy Racetrack System</h1>
+        <p class="project-lead">
+          A four-person electronics project integrating race timing, lap counting and a laser-cut enclosure.
+        </p>
+
+        <div class="project-actions">
+          <a class="primary-button" href="#design">
+            View Timer Design
+            <span aria-hidden="true">↓</span>
+          </a>
+          <a class="secondary-button" href="#implementation">
+            See PCB Development
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <ul class="technology-list" aria-label="Technologies used">
+          <li>Multisim</li>
+          <li>Ultiboard</li>
+          <li>74LS90</li>
+          <li>74LS47</li>
+          <li>555 Timer</li>
+          <li>LaserCAM2D</li>
+        </ul>
+      </section>
+
+      <!-- Complete system and individual responsibility -->
+      <section class="overview-section" id="overview">
+        <figure class="prototype-figure racetrack-system-figure">
+          <img
+            src="../assets/images/racetrack/final-system.jpg"
+            alt="Final toy racetrack electronic system mounted in its laser-cut enclosure"
+            data-lightbox
+            tabindex="0"
+          >
+          <figcaption>
+            Final enclosure showing the lap counter, timer displays,
+            warning controls and reset controls.
+          </figcaption>
+        </figure>
+
+        <div class="overview-content">
+          <p class="section-label">Project overview</p>
+          <h2>A coordinated multi-subsystem electronic product</h2>
+
+          <p>
+            The team developed an electronic control system for a toy
+            racetrack. Its front panel brought together lap counting,
+            race timing, warning functions and user reset controls.
+          </p>
+
+          <p>
+            As team leader and timer subsystem lead, I managed
+            planning and technical coordination while taking the timer
+            from circuit simulation through PCB assembly and testing.
+          </p>
+
+          <dl class="project-facts">
+            <div>
+              <dt>Role</dt>
+              <dd>Team leader</dd>
+            </div>
+            <div>
+              <dt>Technical lead</dt>
+              <dd>Timer subsystem</dd>
+            </div>
+            <div>
+              <dt>Team</dt>
+              <dd>Four students</dd>
+            </div>
+            <div>
+              <dt>Module result</dt>
+              <dd>82%</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Timer circuit design and simulation -->
+      <section class="content-section racetrack-evidence-section" id="design">
+        <div class="section-heading">
+          <p class="section-label">Timer subsystem design</p>
+          <h2>Designing a multi-digit race timer</h2>
+          <p class="section-introduction">
+            The design combined a 555 timer clock with 74LS90 counters,
+            74LS47 decoder-drivers and seven-segment displays. Separate
+            counting stages produced the timer digits and reset behaviour.
+          </p>
+        </div>
+
+        <div class="evidence-grid">
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/racetrack/timer-simulation.png"
+              alt="Annotated Multisim schematic showing the functional blocks of the timer subsystem"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Annotated timer architecture showing the counter, reset and display stages.</figcaption>
+          </figure>
+
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/racetrack/system-simulation.png"
+              alt="Operating Multisim timer simulation with three active seven-segment displays"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Multisim verification with all three timer digits operating.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- PCB layout and physical assembly -->
+      <section class="content-section racetrack-evidence-section" id="implementation">
+        <div class="section-heading">
+          <p class="section-label">PCB implementation</p>
+          <h2>From schematic to soldered timer PCB</h2>
+          <p class="section-introduction">
+            After functional checks in Multisim and on breadboard, I
+            produced the timer PCB layout in Ultiboard, assembled the
+            components and inspected the finished board before testing.
+          </p>
+        </div>
+
+        <div class="evidence-grid">
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/racetrack/timer-pcb-layout.png"
+              alt="Ultiboard PCB layout for the timer subsystem"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Final Ultiboard layout for the timer subsystem.</figcaption>
+          </figure>
+
+          <figure class="evidence-card">
+            <img
+              src="../assets/images/racetrack/assembled-timer-pcb.png"
+              alt="Assembled and soldered timer PCB"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Assembled timer PCB with counters, decoders and displays.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Measurement evidence and fault diagnosis -->
+      <section class="data-section racetrack-testing-section" id="testing">
+        <div class="data-copy">
+          <p class="section-label">Testing and troubleshooting</p>
+          <h2>Verifying clock and counter stages</h2>
+
+          <p>
+            I tested the timer progressively instead of assembling the
+            complete circuit at once. Clock generation, individual digit
+            counting and display decoding were checked as separate stages.
+          </p>
+
+          <p>
+            An oscilloscope, logic probe and multimeter helped isolate
+            wiring, signal and component faults before the design moved
+            from breadboard to PCB.
+          </p>
+        </div>
+
+        <div class="testing-evidence testing-evidence-with-video">
+          <article class="video-card counter-test-video-card">
+            <div class="video-embed video-embed-vertical">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/Dg1JkY1plEk"
+                title="Single-digit breadboard counter test from zero to nine"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="video-card-copy compact-video-copy">
+              <div>
+                <span class="video-version">Breadboard test</span>
+                <h3>Single-digit counter (0–9)</h3>
+              </div>
+
+              <a
+                class="video-external-link"
+                href="https://youtube.com/shorts/Dg1JkY1plEk?feature=share"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <div class="testing-image-stack">
+            <figure class="evidence-card">
+              <img
+                src="../assets/images/racetrack/clock-signal.jpg"
+                alt="Oscilloscope clock signal measured from the breadboard timer circuit"
+                data-lightbox
+                tabindex="0"
+              >
+              <figcaption>Clock signal measured during breadboard testing.</figcaption>
+            </figure>
+
+            <figure class="evidence-card">
+              <img
+                src="../assets/images/racetrack/two-digit-counter.png"
+                alt="Two-digit timer counter assembled on breadboard"
+                data-lightbox
+                tabindex="0"
+              >
+              <figcaption>Two-digit counter stage checked before PCB production.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coordination, enclosure work and assessed outcome -->
+      <section class="engineering-section racetrack-outcome-section" id="outcome">
+        <div class="outcome-layout">
+          <div class="outcome-copy">
+            <p class="section-label">Coordination and outcome</p>
+            <h2>Leading design and delivery</h2>
+
+            <p>
+              Alongside the timer work, I coordinated the Gantt chart,
+              block diagram, team reporting and technical integration.
+              I also produced the enclosure design for laser cutting.
+            </p>
+
+            <p>
+              The team completed the subsystem designs, prototype
+              demonstrations and final group report. My timer PCB and
+              breadboard prototype both operated successfully.
+            </p>
+          </div>
+
+          <figure class="evidence-card enclosure-figure">
+            <img
+              src="../assets/images/racetrack/enclosure-cad.png"
+              alt="Top-view CAD design for the laser-cut racetrack system enclosure"
+              data-lightbox
+              tabindex="0"
+            >
+            <figcaption>Top-view CAD layout prepared for LaserCAM2D.</figcaption>
+          </figure>
+        </div>
+
+        <div class="result-grid" aria-label="Assessment results">
+          <article>
+            <span>Module</span>
+            <strong>82%</strong>
+          </article>
+          <article>
+            <span>Presentation</span>
+            <strong>82%</strong>
+          </article>
+          <article>
+            <span>Group report</span>
+            <strong>78%</strong>
+          </article>
+          <article>
+            <span>Individual report</span>
+            <strong>75%</strong>
+          </article>
+        </div>
+
+        <div class="project-ending">
+          <nav class="project-switcher" aria-label="Browse portfolio projects">
+            <a
+              class="project-switch-card project-switch-previous"
+              href="esp32.html"
+              aria-label="Previous project: ESP32 Light Sensor Alarm System"
+            >
+              <span class="project-switch-direction">
+                <span aria-hidden="true">←</span>
+                Previous project
+              </span>
+              <strong>ESP32</strong>
+            </a>
+
+            <a class="project-switch-card all-projects-card" href="../index.html">
+              <span>All Projects</span>
+            </a>
+
+            <span
+              class="project-switch-card project-switch-next is-unavailable"
+              role="link"
+              aria-disabled="true"
+              aria-label="Next project: JK Flip-Flop Traffic Light Controller. Project page not yet available."
+            >
+              <span class="project-switch-direction">
+                Next project
+                <span aria-hidden="true">→</span>
+              </span>
+              <strong>Traffic Light</strong>
+            </span>
+          </nav>
+
+          <footer class="site-footer">
+            <p>© 2026 Zeyu Lin</p>
+          </footer>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Full-viewport image viewer with zoom and drag controls -->
+  <div
+    class="image-lightbox"
+    id="image-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded project image"
+    hidden
+  >
+    <div class="lightbox-toolbar" aria-label="Image controls">
+      <button id="lightbox-zoom-out" type="button" aria-label="Zoom out">−</button>
+      <button id="lightbox-reset" type="button" aria-label="Reset zoom">100%</button>
+      <button id="lightbox-zoom-in" type="button" aria-label="Zoom in">+</button>
+      <button id="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+    </div>
+
+    <div class="lightbox-stage" id="lightbox-stage">
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </div>
+
+  <script>
+    // Keep the contact panel usable with mouse, keyboard and touch input.
+    const contactMenu = document.querySelector(".contact-menu");
+    const contactToggle = document.getElementById("contact-toggle");
+
+    function closeContactMenu() {
+      contactMenu.classList.remove("is-open");
+      contactToggle.setAttribute("aria-expanded", "false");
+    }
+
+    contactToggle.addEventListener("click", function (event) {
+      event.stopPropagation();
+      const willOpen = !contactMenu.classList.contains("is-open");
+
+      contactMenu.classList.toggle("is-open", willOpen);
+      contactToggle.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!contactMenu.contains(event.target)) {
+        closeContactMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        contactMenu.classList.contains("is-open")
+      ) {
+        closeContactMenu();
+        contactToggle.focus();
+      }
+    });
+
+    // Connect all six navigation dots to the complete page structure.
+    const sectionDots = Array.from(
+      document.querySelectorAll(".section-dot")
+    );
+
+    const navigationStops = sectionDots.map(function (dot) {
+      return document.getElementById(dot.dataset.target);
+    });
+
+    const previousSectionButton =
+      document.getElementById("previous-section");
+
+    const nextSectionButton =
+      document.getElementById("next-section");
+
+    let activeNavigationIndex = 0;
+
+    function setActiveSection(index) {
+      activeNavigationIndex = index;
+
+      sectionDots.forEach(function (dot, dotIndex) {
+        const isActive = dotIndex === index;
+
+        dot.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+
+      previousSectionButton.disabled = index === 0;
+      nextSectionButton.disabled = index === navigationStops.length - 1;
+    }
+
+    function scrollToSection(index) {
+      if (index === 0) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const targetSection = navigationStops[index];
+      const sectionBounds = targetSection.getBoundingClientRect();
+      const sectionTop = window.scrollY + sectionBounds.top;
+      const centredPosition =
+        sectionTop + targetSection.offsetHeight / 2 - window.innerHeight / 2;
+
+      window.scrollTo({
+        top: Math.max(0, centredPosition),
+        behavior: "smooth"
+      });
+    }
+
+    sectionDots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        setActiveSection(index);
+        scrollToSection(index);
+      });
+    });
+
+    previousSectionButton.addEventListener("click", function () {
+      if (activeNavigationIndex > 0) {
+        setActiveSection(activeNavigationIndex - 1);
+        scrollToSection(activeNavigationIndex);
+      }
+    });
+
+    nextSectionButton.addEventListener("click", function () {
+      if (activeNavigationIndex < navigationStops.length - 1) {
+        setActiveSection(activeNavigationIndex + 1);
+        scrollToSection(activeNavigationIndex);
+      }
+    });
+
+    // Highlight the section whose centre is nearest the viewport centre.
+    function updateActiveSectionFromScroll() {
+      let nearestIndex = 0;
+      let nearestDistance = Number.POSITIVE_INFINITY;
+
+      navigationStops.forEach(function (section, index) {
+        const sectionBounds = section.getBoundingClientRect();
+        const sectionPosition =
+          sectionBounds.top + sectionBounds.height / 2;
+        const distance = Math.abs(
+          sectionPosition - window.innerHeight / 2
+        );
+
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIndex = index;
+        }
+      });
+
+      if (nearestIndex !== activeNavigationIndex) {
+        setActiveSection(nearestIndex);
+      }
+    }
+
+    let scrollUpdateRequested = false;
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!scrollUpdateRequested) {
+          window.requestAnimationFrame(function () {
+            updateActiveSectionFromScroll();
+            scrollUpdateRequested = false;
+          });
+
+          scrollUpdateRequested = true;
+        }
+      },
+      { passive: true }
+    );
+
+    setActiveSection(0);
+    updateActiveSectionFromScroll();
+
+    // Open project evidence in a full-viewport viewer.
+    const lightbox = document.getElementById("image-lightbox");
+    const lightboxStage = document.getElementById("lightbox-stage");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxClose = document.getElementById("lightbox-close");
+    const lightboxZoomOut = document.getElementById("lightbox-zoom-out");
+    const lightboxZoomIn = document.getElementById("lightbox-zoom-in");
+    const lightboxReset = document.getElementById("lightbox-reset");
+    const expandableImages = Array.from(
+      document.querySelectorAll("[data-lightbox]")
+    );
+
+    let lightboxScale = 1;
+    let lightboxX = 0;
+    let lightboxY = 0;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let isDragging = false;
+    let imageThatOpenedLightbox = null;
+
+    function updateLightboxTransform() {
+      lightboxImage.style.transform =
+        `translate(${lightboxX}px, ${lightboxY}px) scale(${lightboxScale})`;
+      lightboxReset.textContent = `${Math.round(lightboxScale * 100)}%`;
+      lightboxStage.classList.toggle("can-drag", lightboxScale > 1);
+    }
+
+    function resetLightboxView() {
+      lightboxScale = 1;
+      lightboxX = 0;
+      lightboxY = 0;
+      updateLightboxTransform();
+    }
+
+    function openLightbox(image) {
+      imageThatOpenedLightbox = image;
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.hidden = false;
+      document.body.classList.add("lightbox-open");
+      resetLightboxView();
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      if (lightbox.hidden) {
+        return;
+      }
+
+      lightbox.hidden = true;
+      document.body.classList.remove("lightbox-open");
+      lightboxImage.src = "";
+
+      if (imageThatOpenedLightbox) {
+        imageThatOpenedLightbox.focus();
+      }
+    }
+
+    function changeLightboxZoom(amount) {
+      lightboxScale = Math.min(4, Math.max(0.5, lightboxScale + amount));
+
+      if (lightboxScale <= 1) {
+        lightboxX = 0;
+        lightboxY = 0;
+      }
+
+      updateLightboxTransform();
+    }
+
+    function addExpandIndicator(image) {
+      if (image.parentElement.classList.contains("expandable-image-frame")) {
+        return;
+      }
+
+      const frame = document.createElement("div");
+      frame.className = "expandable-image-frame";
+      image.parentNode.insertBefore(frame, image);
+      frame.appendChild(image);
+
+      const indicator = document.createElement("span");
+      indicator.className = "image-expand-indicator";
+      indicator.setAttribute("aria-hidden", "true");
+      indicator.innerHTML = `
+        <svg viewBox="0 0 24 24" focusable="false">
+          <circle cx="10.5" cy="10.5" r="6.5"></circle>
+          <path d="M15.4 15.4L21 21"></path>
+          <path d="M10.5 7.5v6M7.5 10.5h6"></path>
+        </svg>
+      `;
+      frame.appendChild(indicator);
+    }
+
+    expandableImages.forEach(function (image) {
+      addExpandIndicator(image);
+
+      image.addEventListener("click", function () {
+        openLightbox(image);
+      });
+
+      image.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(image);
+        }
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxZoomOut.addEventListener("click", function () {
+      changeLightboxZoom(-0.25);
+    });
+    lightboxZoomIn.addEventListener("click", function () {
+      changeLightboxZoom(0.25);
+    });
+    lightboxReset.addEventListener("click", resetLightboxView);
+
+    lightboxStage.addEventListener(
+      "wheel",
+      function (event) {
+        event.preventDefault();
+        changeLightboxZoom(event.deltaY < 0 ? 0.25 : -0.25);
+      },
+      { passive: false }
+    );
+
+    lightboxStage.addEventListener("pointerdown", function (event) {
+      if (lightboxScale <= 1) {
+        return;
+      }
+
+      isDragging = true;
+      dragStartX = event.clientX - lightboxX;
+      dragStartY = event.clientY - lightboxY;
+      lightboxStage.classList.add("is-dragging");
+      lightboxStage.setPointerCapture(event.pointerId);
+    });
+
+    lightboxStage.addEventListener("pointermove", function (event) {
+      if (!isDragging) {
+        return;
+      }
+
+      lightboxX = event.clientX - dragStartX;
+      lightboxY = event.clientY - dragStartY;
+      updateLightboxTransform();
+    });
+
+    function finishLightboxDrag(event) {
+      if (!isDragging) {
+        return;
+      }
+
+      isDragging = false;
+      lightboxStage.classList.remove("is-dragging");
+
+      if (lightboxStage.hasPointerCapture(event.pointerId)) {
+        lightboxStage.releasePointerCapture(event.pointerId);
+      }
+    }
+
+    lightboxStage.addEventListener("pointerup", finishLightboxDrag);
+    lightboxStage.addEventListener("pointercancel", finishLightboxDrag);
+
+    lightboxStage.addEventListener("dblclick", function () {
+      if (lightboxScale === 1) {
+        changeLightboxZoom(1);
+      } else {
+        resetLightboxView();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (lightbox.hidden) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      } else if (event.key === "+" || event.key === "=") {
+        changeLightboxZoom(0.25);
+      } else if (event.key === "-") {
+        changeLightboxZoom(-0.25);
+      } else if (event.key === "0") {
+        resetLightboxView();
+      }
+    });
+  </script>
+</body>
+</html>

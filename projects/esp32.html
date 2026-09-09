@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="../project.css">
 </head>
 
-<body>
+<body class="esp32-project-page">
   <!-- Shared portfolio header and contact menu -->
   <header class="site-header">
     <div class="header-inner">
@@ -79,7 +79,7 @@
     </div>
   </header>
 
-  <!-- Desktop section navigation; hidden on narrower screens -->
+  <!-- Seven-page navigation for the complete project story -->
   <nav class="section-navigation" aria-label="ESP32 project sections">
     <div class="section-dots">
       <button class="section-dot is-active" type="button" data-target="introduction" aria-label="Go to Project introduction" aria-current="true">
@@ -87,6 +87,9 @@
       </button>
       <button class="section-dot" type="button" data-target="overview" aria-label="Go to Project overview">
         <span>Project overview</span>
+      </button>
+      <button class="section-dot" type="button" data-target="demonstration" aria-label="Go to System demonstration">
+        <span>System demonstration</span>
       </button>
       <button class="section-dot" type="button" data-target="functionality" aria-label="Go to Core functionality">
         <span>Core functionality</span>
@@ -133,17 +136,21 @@
 
         <div class="project-actions">
           <a
-            class="primary-button"
+            class="primary-button external-button"
             href="https://github.com/Zeyu-Ethan/esp32-light-sensor-alarm"
             target="_blank"
             rel="noopener noreferrer"
           >
             View GitHub Repository
-            <span aria-hidden="true">↗</span>
+            <svg class="button-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M10.5 13.5l3-3"></path>
+              <path d="M7.3 16.7l-1 1a3.8 3.8 0 0 1-5.4-5.4l3.2-3.2a3.8 3.8 0 0 1 5.4 0"></path>
+              <path d="M16.7 7.3l1-1a3.8 3.8 0 0 1 5.4 5.4l-3.2 3.2a3.8 3.8 0 0 1-5.4 0"></path>
+            </svg>
           </a>
 
-          <a class="secondary-button" href="#development">
-            Explore Development
+          <a class="secondary-button" href="#demonstration">
+            Watch System Demo
             <span aria-hidden="true">↓</span>
           </a>
         </div>
@@ -164,6 +171,8 @@
           <img
             src="../assets/images/esp32/final_prototype_overview.jpg"
             alt="Completed ESP32 light sensor alarm hardware prototype"
+            data-lightbox
+            tabindex="0"
           >
 
           <figcaption>
@@ -211,6 +220,81 @@
               <dd>Arduino IDE and Python</dd>
             </div>
           </dl>
+        </div>
+      </section>
+
+      <!-- Recorded demonstrations of the early and integrated prototypes -->
+      <section class="content-section video-section esp32-demo-section" id="demonstration">
+        <div class="section-heading">
+          <p class="section-label">System demonstration</p>
+          <h2>From first prototype to integrated monitoring</h2>
+          <p class="section-introduction">
+            These demonstrations show the project at two development
+            stages: the initial sensor-and-alarm prototype and the later
+            system combining alarm logic with local web monitoring.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card featured-video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dECyC5ZzRzY"
+                title="ESP32 Light Sensor Alarm V3 integrated system demonstration"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="video-card-copy">
+              <div>
+                <span class="video-version">V3 · Integrated system</span>
+                <h3>Alarm logic and local web monitoring</h3>
+              </div>
+
+              <a
+                class="video-external-link"
+                href="https://youtu.be/dECyC5ZzRzY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Watch on YouTube
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/25t3WMKX8aA"
+                title="ESP32 Light Sensor Alarm System V1 prototype demonstration"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="video-card-copy">
+              <div>
+                <span class="video-version">V1 · Early prototype</span>
+                <h3>Light sensing and alarm output</h3>
+              </div>
+
+              <a
+                class="video-external-link"
+                href="https://youtu.be/25t3WMKX8aA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Watch on YouTube
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -351,6 +435,8 @@
           <img
             src="../assets/images/esp32/serial_log_plot.png"
             alt="Graph of ESP32 LDR readings and alarm events over time"
+            data-lightbox
+            tabindex="0"
           >
 
           <figcaption>
@@ -412,21 +498,49 @@
         </div>
 
         <a
-          class="primary-button"
+          class="primary-button external-button"
           href="https://github.com/Zeyu-Ethan/esp32-light-sensor-alarm"
           target="_blank"
           rel="noopener noreferrer"
         >
           Open Repository
-          <span aria-hidden="true">↗</span>
+          <svg class="button-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10.5 13.5l3-3"></path>
+            <path d="M7.3 16.7l-1 1a3.8 3.8 0 0 1-5.4-5.4l3.2-3.2a3.8 3.8 0 0 1 5.4 0"></path>
+            <path d="M16.7 7.3l1-1a3.8 3.8 0 0 1 5.4 5.4l-3.2 3.2a3.8 3.8 0 0 1-5.4 0"></path>
+          </svg>
         </a>
         </section>
 
         <div class="project-ending">
-          <nav class="project-navigation" aria-label="Project navigation">
-            <a class="return-button" href="../index.html">
-              <span aria-hidden="true">←</span>
-              Back to all projects
+          <nav class="project-switcher" aria-label="Browse portfolio projects">
+            <span
+              class="project-switch-card project-switch-previous is-unavailable"
+              role="link"
+              aria-disabled="true"
+              aria-label="Previous project: AMplify Impact Challenge. Project page not yet available."
+            >
+              <span class="project-switch-direction">
+                <span aria-hidden="true">←</span>
+                Previous project
+              </span>
+              <strong>AMplify</strong>
+            </span>
+
+            <a class="project-switch-card all-projects-card" href="../index.html">
+              <span>All Projects</span>
+            </a>
+
+            <a
+              class="project-switch-card project-switch-next"
+              href="racetrack.html"
+              aria-label="Next project: Smart Electronic Toy Racetrack System"
+            >
+              <span class="project-switch-direction">
+                Next project
+                <span aria-hidden="true">→</span>
+              </span>
+              <strong>Racetrack</strong>
             </a>
           </nav>
 
@@ -437,6 +551,27 @@
       </section>
     </div>
   </main>
+
+  <!-- Full-viewport image viewer with zoom and drag controls -->
+  <div
+    class="image-lightbox"
+    id="image-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded project image"
+    hidden
+  >
+    <div class="lightbox-toolbar" aria-label="Image controls">
+      <button id="lightbox-zoom-out" type="button" aria-label="Zoom out">−</button>
+      <button id="lightbox-reset" type="button" aria-label="Reset zoom">100%</button>
+      <button id="lightbox-zoom-in" type="button" aria-label="Zoom in">+</button>
+      <button id="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+    </div>
+
+    <div class="lightbox-stage" id="lightbox-stage">
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </div>
 
   <script>
     // Keep the contact panel usable with mouse, keyboard and touch input.
@@ -474,7 +609,7 @@
       }
     });
 
-    // Connect all six navigation dots to the complete page structure.
+    // Connect all seven navigation dots to the complete page structure.
     const sectionDots = Array.from(
       document.querySelectorAll(".section-dot")
     );
@@ -514,9 +649,20 @@
     }
 
     function scrollToSection(index) {
-      navigationStops[index].scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+      if (index === 0) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const targetSection = navigationStops[index];
+      const sectionBounds = targetSection.getBoundingClientRect();
+      const sectionTop = window.scrollY + sectionBounds.top;
+      const centredPosition =
+        sectionTop + targetSection.offsetHeight / 2 - window.innerHeight / 2;
+
+      window.scrollTo({
+        top: Math.max(0, centredPosition),
+        behavior: "smooth"
       });
     }
 
@@ -585,5 +731,6 @@
     setActiveSection(0);
     updateActiveSectionFromScroll();
   </script>
+  <script src="../project-lightbox.js"></script>
 </body>
 </html>

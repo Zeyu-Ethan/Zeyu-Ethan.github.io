@@ -310,6 +310,53 @@ button {
   pointer-events: none;
 }
 
+.hero-link-icon {
+  position: absolute;
+  right: 14px;
+  bottom: 11px;
+
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(12, 12, 14, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 6px;
+  backdrop-filter: blur(7px);
+
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.hero-link-icon svg {
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.hero-project-link:hover .hero-link-icon,
+.hero-project-link:focus-visible .hero-link-icon {
+  color: #ffffff;
+  background: rgba(99, 49, 138, 0.82);
+  border-color: rgba(255, 255, 255, 0.58);
+  transform: translate(1px, -1px);
+}
+
+.hero-project-link.is-disabled .hero-link-icon {
+  display: none;
+}
+
 .hero-project-link:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.92);
   outline-offset: -5px;
@@ -338,7 +385,7 @@ button {
 
 .project-summary {
   position: absolute;
-  right: 20px;
+  right: 68px;
   bottom: 14px;
   left: 20px;
   z-index: 3;
@@ -561,7 +608,7 @@ button {
   }
 
   .project-summary {
-    right: 14px;
+    right: 58px;
     bottom: 11px;
     left: 14px;
 

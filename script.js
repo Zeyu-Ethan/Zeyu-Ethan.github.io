@@ -10,7 +10,7 @@ const projects = [
   {
     image: "assets/images/covers/racetrack-cover.jpg",
     alt: "Smart Electronic Toy Racetrack System",
-    url: null,
+    url: "projects/racetrack.html",
     summary:
       "Smart Electronic Toy Racetrack System — PCB timer design and testing.",
     gradient: "35, 55, 78"
